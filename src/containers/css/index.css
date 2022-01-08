@@ -1,0 +1,53 @@
+/*  */
+.absoluteTop {
+  position: relative;
+  width: 120vw;
+  height: 55vh;
+  /* transform: rotate(12deg); */
+  /* top: -100px; */
+  /* left: 100px; */
+}
+
+.absoluteBottom {
+  /* position: absolute; */
+  width: 100vw;
+  height: 45vh;
+  /* transform: rotate(75deg); */
+  /* bottom: 0 ; */
+  /* right: 13px; */
+}
+
+.cont1 {
+  overflow: hidden;
+}
+
+.aboutMe {
+  position: absolute;
+  top: 15vh;
+  z-index: 5;
+  padding-left: 20px;
+}
+
+.chosen {
+  display: flex;
+  flex-direction: row;
+  /* padding-left: 24px; */
+}
+
+.about {
+  margin-bottom: 30px;
+  display: flex;
+  /* border: 1px solid black; */
+}
+/* .contAbout {
+    display:block
+} */
+
+@media screen and (max-width: 369px) {
+    .aboutMe {
+        position: absolute;
+        top: 0vh;
+        z-index: 5;
+        padding-left: 20px;
+      }
+}

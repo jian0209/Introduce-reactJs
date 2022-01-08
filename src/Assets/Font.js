@@ -1,6 +1,16 @@
 import Colors from './Colors';
 
 const Font = {
+  mainTitle: {
+    fontSize: 15 + 'vh',
+    fontWeight: 'bold',
+    color: Colors.primaryColor,
+  },
+  subMainTitle: {
+    fontSize: 5 + 'vh',
+    fontWeight: 'bold',
+    color: Colors.lightPrimaryColor,
+  },
   title_en: {
     fontSize: 32,
     fontWeight: 'bold',
