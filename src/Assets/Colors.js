@@ -12,6 +12,8 @@ const blackColor = '#393939';
 const lightGreyColor = '#ededed';
 const darkGreyColor = '#abaab0';
 const progressBarColor = '#87b0c4';
+const goldColor = '#F5BD02';
+const darkGoldColor = '#624C01';
 
 const Colors = {
     primaryColor,
@@ -24,6 +26,8 @@ const Colors = {
     lightGreyColor,
     darkGreyColor,
     progressBarColor,
+    goldColor,
+    darkGoldColor,
 }
 
 export default Colors;
