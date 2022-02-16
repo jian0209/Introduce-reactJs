@@ -9,7 +9,7 @@ import logo from "../Assets/image/self_icon.png";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
 import axios from 'axios';
-import {API_GET_TEST} from '../global/api';
+import {API_GET_TEST, LOCAL_API} from '../global/api';
 
 const Index = () => {
   // useState
