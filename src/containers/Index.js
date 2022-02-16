@@ -8,19 +8,45 @@ import "./css/index.css";
 import logo from "../Assets/image/self_icon.png";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
-import db from '../global/db.json';
-
+import axios from 'axios';
+import {LOCAL_API_DATA} from '../global/api';
 
 const Index = () => {
   // useState
   // const [language, setLanguage] = useState([]);
+  const jsonString = [
+    { name: "eric", id: "1" },
+    { name: "andrew", id: "2" },
+    { name: "john", id: "3" },
+    { name: "Flintoff", id: "4" },
+    { name: "Greg", id: "5" },
+    { name: "Francis", id: "6" },
+  ];
 
   // useEffect
   useEffect(() => {
-    console.log(db);
+    // console.log(JSON.stringify(jsonString, null, 4));
+    fetchData();
+    fetchSetData(jsonString);
   }, []);
 
   // function
+  const fetchData = async () => {
+    await axios
+    .get(LOCAL_API_DATA)
+    .then((res) => {console.log(res.data)})
+    .catch((err) => {console.log(err)})
+  }
+
+  const fetchSetData = async (data) => {
+    await axios
+    .put(LOCAL_API_DATA, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({data})
+    })
+  }
 
   return (
     <div className="cont1">
@@ -37,13 +63,6 @@ const Index = () => {
         }}
       >
         <Container>
-          {/* <ul>
-            {language.map((user, index) => (
-              <li key={index}>
-                #{user.name}: {user.age} {user.sex}
-              </li>
-            ))}
-          </ul> */}
           <img src={logo} alt="Logo" width="50" height="35" />
         </Container>
         <Container id="topNav">
