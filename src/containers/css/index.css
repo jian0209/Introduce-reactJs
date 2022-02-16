@@ -3,16 +3,42 @@
   width: 100vw;
   height: 50px;
   position: fixed;
- }
+}
 
-/* .absoluteBottom {
-  position: absolute;
+.absoluteBottom {
+  /* border: 1px solid black; */
+  height: 100%;
   width: 100vw;
-  height: 45vh;
-  transform: rotate(75deg);
-  bottom: 0 ; 
-  right: 13px;
-} */
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.animationTyping{
+  font-size: 80px;
+  color: #E0CEBA;
+}
+
+.animationTypingMain{
+  /* border: 1px solid black; */
+  text-align: center;
+  margin-top: 20vh;
+  margin-bottom: 40px;
+}
+
+.aboutMeTop {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+}
 
 .cont1 {
   width: 100vw;
@@ -21,7 +47,7 @@
   background-repeat: no-repeat;
 }
 
-#language{
+#language {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

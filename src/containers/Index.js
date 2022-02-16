@@ -8,45 +8,53 @@ import "./css/index.css";
 import logo from "../Assets/image/self_icon.png";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
-import axios from 'axios';
-import {API_GET_TEST, LOCAL_API} from '../global/api';
+import axios from "axios";
+import {
+  API_GET_LAN_DATA,
+  API_GET_ALL_DATA,
+  API_GET_TEST_DATA,
+} from "../global/api";
+import Typist from "react-typist";
 
 const Index = () => {
   // useState
-  // const [language, setLanguage] = useState([]);
-  const jsonString = [
-    { name: "eric", id: "1" },
-    { name: "andrew", id: "2" },
-    { name: "john", id: "3" },
-    { name: "Flintoff", id: "4" },
-    { name: "Greg", id: "5" },
-    { name: "Francis", id: "6" },
-  ];
+  const [language, setLanguage] = useState([]);
 
   // useEffect
   useEffect(() => {
-    // console.log(JSON.stringify(jsonString, null, 4));
     fetchData();
-    fetchSetData(jsonString);
   }, []);
 
   // function
   const fetchData = async () => {
     await axios
-    .get(API_GET_TEST)
-    .then((res) => {console.log(res.data)})
-    .catch((err) => {console.log(err)})
-  }
+      .get(API_GET_LAN_DATA)
+      .then((res) => {
+        console.log(res.data);
+        setLanguage(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-  const fetchSetData = async (data) => {
-    await axios
-    .put(API_GET_TEST, {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({data})
-    })
-  }
+  // const createData = async (data123) => {
+  //   const data1 = {
+  //     "id": 4,
+  //     "name": "eric",
+  //     "surname": "sharasd",
+  //   }
+  //   axios.post(API_GET_LOCAL_DATA, data1)
+  //     // .then((res) => {res.json()})
+  //     .then((data) => console.log(data))
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   // const article = { title: 'React Put Request Exampl' };
+  //   // const response = await axios.put(API_GET_TEST_DATA, article);
+  //   // console.log(response.data);
+
+  // };
 
   return (
     <div className="cont1">
@@ -54,7 +62,7 @@ const Index = () => {
       <div
         className="absoluteTop"
         style={{
-          backgroundColor: Colors.darkGoldColor,
+          backgroundColor: Colors.lightPrimaryColor,
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
@@ -62,9 +70,6 @@ const Index = () => {
           // paddingHorizontal: '5vw',
         }}
       >
-        <Container>
-          <img src={logo} alt="Logo" width="50" height="35" />
-        </Container>
         <Container id="topNav">
           <Header />
         </Container>
@@ -72,7 +77,7 @@ const Index = () => {
           <Link
             component="button"
             href="Home_en"
-            color={Colors.goldColor}
+            color={Colors.secondaryColor}
             underline="hover"
             style={{ marginRight: 15 }}
             onClick={() => {}}
@@ -82,7 +87,7 @@ const Index = () => {
           <Link
             component="button"
             href="Home_en"
-            color={Colors.goldColor}
+            color={Colors.secondaryColor}
             underline="hover"
             onClick={() => {}}
           >
@@ -91,10 +96,69 @@ const Index = () => {
         </Container>
       </div>
       {/* absolute bottom container */}
-      <div
-        className="absoluteBottom"
-        style={{ backgroundColor: Colors.primaryColor }}
-      />
+      <Container className="absoluteBottom">
+        <Typist
+          className="animationTypingMain"
+          cursor={{
+            show: false,
+          }}
+        >
+          <span className="animationTyping">I'm a Web Developer.</span>
+          <Typist.Backspace count={21} delay={2000} />
+          <span className="animationTyping">I'm a Frontend Developer.</span>
+          <Typist.Backspace count={25} delay={2000} />
+          <span className="animationTyping">I'm a Application Developer.</span>
+          <Typist.Backspace count={28} delay={2000} />
+          <span className="animationTyping">
+            I can learn everything with my best.
+          </span>
+          <Typist.Backspace count={31} delay={2000} />
+          <span className="animationTyping">
+            I can learn much as I can.
+          </span>
+          <Typist.Backspace count={26} delay={2000} />
+          <div className="animationTyping">
+            LEARNED
+          </div>
+          <Typist.Backspace count={0} delay={2000} />
+          <span className="animationTyping">
+            JAVA
+          </span>
+          <Typist.Backspace count={4} delay={2000} />
+          <span className="animationTyping">
+            JavaScript
+          </span>
+          <Typist.Backspace count={10} delay={2000} />
+          <span className="animationTyping">
+            Visual Basic
+          </span>
+          <Typist.Backspace count={12} delay={2000} />
+          <span className="animationTyping">
+            HTML | CSS
+          </span>
+          <Typist.Backspace count={10} delay={2000} />
+          <span className="animationTyping">
+            PHP
+          </span>
+          <Typist.Backspace count={3} delay={2000} />
+          <span className="animationTyping">
+            PYTHON
+          </span>
+          <Typist.Backspace count={6} delay={2000} />
+          <span className="animationTyping">
+            CISCO PACKET TRACE
+          </span>
+          <Typist.Backspace count={18} delay={2000} />
+          <span className="animationTyping">
+            REACT NATIVE | REACT JS
+          </span>
+        </Typist>
+
+        <p className="description">
+          I'm a startup software developer, Fresh Graduate Student, and Frontend
+          Designer who loves ambitious challenges, study, and energetic.
+        </p>
+      </Container>
     </div>
   );
 };

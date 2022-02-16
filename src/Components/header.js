@@ -30,9 +30,9 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     fontWeight: theme.typography.fontWeightRegular,
     fontSize: theme.typography.pxToRem(15),
     marginRight: theme.spacing(1),
-    color: "rgba(255, 255, 255, 0.7)",
+    color: Colors.secondaryColor,
     "&.Mui-selected": {
-      color: Colors.goldColor,
+      color: Colors.sideBarColor,
     },
     "&.Mui-focusVisible": {
       backgroundColor: "rgba(100, 95, 228, 0.32)",
@@ -53,10 +53,10 @@ export default function Header() {
     <Box sx={{ width: "100%", height: 50, }}>
       <Box>
         <StyledTabs value={currentNav} onChange={handleChange}>
-          <StyledTab label="About Me" />
-          <StyledTab label="Contact Me" />
-          <StyledTab label="Project View" />
-          <StyledTab label="Download Project" />
+          <StyledTab label="ABOUT" />
+          <StyledTab label="SKILLSET" />
+          <StyledTab label="PORTFOLIO" />
+          <StyledTab label="CONTACT ME" />
         </StyledTabs>
         <Box sx={{ p: 3 }} />
       </Box>
