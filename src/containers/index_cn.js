@@ -6,37 +6,17 @@ import Colors from "../Assets/Colors";
 import Font from "../Assets/Font";
 import "./css/index.css";
 import logo from "../Assets/image/self_icon.png";
-import Header from "../Components/header";
+import Header_cn from "../Components/header_cn";
 import Link from "@mui/material/Link";
-import axios from "axios";
-import {
-  API_GET_LAN_DATA,
-  API_GET_ALL_DATA,
-  API_GET_TEST_DATA,
-} from "../global/api";
 import Typist from "react-typist";
 
-const Index = () => {
+const Home_cn = () => {
   // useState
-  const [language, setLanguage] = useState([]);
 
   // useEffect
-  useEffect(() => {
-    fetchData();
-  }, []);
+  useEffect(() => {}, []);
 
   // function
-  const fetchData = async () => {
-    await axios
-      .get(API_GET_LAN_DATA)
-      .then((res) => {
-        console.log(res.data);
-        setLanguage(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
   // const createData = async (data123) => {
   //   const data1 = {
@@ -71,7 +51,7 @@ const Index = () => {
         }}
       >
         <Container id="topNav">
-          <Header />
+          <Header_cn />
         </Container>
         <Container id="language">
           <Link
@@ -84,9 +64,9 @@ const Index = () => {
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href=""
+              href="/"
             >
-              English
+              英文
             </a>
           </Link>
           <Link
@@ -100,7 +80,7 @@ const Index = () => {
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
               href="Home_cn"
             >
-              Mandarin
+              中文
             </a>
           </Link>
         </Container>
@@ -113,18 +93,18 @@ const Index = () => {
             show: false,
           }}
         >
-          <span className="animationTyping">I'm a Web Developer.</span>
-          <Typist.Backspace count={21} delay={2000} />
-          <span className="animationTyping">I'm a Frontend Developer.</span>
-          <Typist.Backspace count={25} delay={2000} />
-          <span className="animationTyping">I'm a Application Developer.</span>
-          <Typist.Backspace count={28} delay={2000} />
+          <span className="animationTyping">我是一名网页设计师.</span>
+          <Typist.Backspace count={10} delay={2000} />
+          <span className="animationTyping">我是一名前端开发者.</span>
+          <Typist.Backspace count={10} delay={2000} />
+          <span className="animationTyping">我是一名应用开发者.</span>
+          <Typist.Backspace count={10} delay={2000} />
           <span className="animationTyping">
-            I can learn everything with my best.
+            我想要学习更多的知识.
           </span>
-          <Typist.Backspace count={36} delay={2000} />
-          <div className="animationTyping">LEARNED</div>
-          <Typist.Backspace count={0} delay={500} />
+          <Typist.Backspace count={11} delay={2000} />
+          <div className="animationTyping">已学习</div>
+          <Typist.Backspace count={0} delay={600} />
           <span className="animationTyping">JAVA</span>
           <Typist.Backspace count={4} delay={2000} />
           <span className="animationTyping">JavaScript</span>
@@ -145,8 +125,7 @@ const Index = () => {
         </Typist>
 
         <p className="description">
-          I'm a startup software developer, Fresh Graduate Student, and Frontend
-          Designer who loves ambitious challenges, study, and energetic. Currently, I learning node js as the backend of my project.
+          我是一名喜欢挑战自我， 热爱学习， 和能量满满的社会小白， 新鲜出炉的毕业生， 和前端开发者。 我目前正在学习后端开发 - node js。
         </p>
         <Typist className="typingName" cursor={{
             show: false,
@@ -161,4 +140,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home_cn;

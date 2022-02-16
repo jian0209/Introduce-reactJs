@@ -28,6 +28,10 @@
   margin-bottom: 40px;
 }
 
+.typingName{
+  text-align: center;
+}
+
 .aboutMeTop {
   font-size: 100px;
   font-weight: bold;

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Index from "./containers/Index";
-import Home_en from "./containers/Home_en";
+import Home_cn from "./containers/index_cn";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/" component={Index} exact />
-        <Route path="/Home_en" component={Home_en} />
+        <Route path="/Home_cn" component={Home_cn} />
       </Switch>
     </div>
     </BrowserRouter>
