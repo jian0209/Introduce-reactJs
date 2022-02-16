@@ -1,1 +1,1 @@
-export const LOCAL_API_DATA = './db.json';
+export const LOCAL_API_DATA = 'https://my-json-server.typicode.com/jian0209/Introduce-reactJs/test';
