@@ -9,7 +9,7 @@ import logo from "../Assets/image/self_icon.png";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
 import axios from 'axios';
-import {LOCAL_API_DATA} from '../global/api';
+import {API_GET_TEST} from '../global/api';
 
 const Index = () => {
   // useState
@@ -33,14 +33,14 @@ const Index = () => {
   // function
   const fetchData = async () => {
     await axios
-    .get(LOCAL_API_DATA)
+    .get(API_GET_TEST)
     .then((res) => {console.log(res.data)})
     .catch((err) => {console.log(err)})
   }
 
   const fetchSetData = async (data) => {
     await axios
-    .put(LOCAL_API_DATA, {
+    .put(API_GET_TEST, {
       headers: {
         'Content-Type': 'application/json'
       },
