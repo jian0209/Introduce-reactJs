@@ -9,6 +9,7 @@ import logo from "../Assets/image/self_icon.png";
 import Header_cn from "../Components/header_cn";
 import Link from "@mui/material/Link";
 import Typist from "react-typist";
+import { CommonStore } from "../Store/commonStore";
 
 const Home_cn = () => {
   // useState
@@ -94,33 +95,33 @@ const Home_cn = () => {
           }}
         >
           <span className="animationTyping">我是一名网页设计师.</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">我是一名前端开发者.</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">我是一名应用开发者.</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">
             我想要学习更多的知识.
           </span>
-          <Typist.Backspace count={11} delay={2000} />
+          <Typist.Backspace count={11} delay={1000} />
           <div className="animationTyping">已学习</div>
           <Typist.Backspace count={0} delay={600} />
           <span className="animationTyping">JAVA</span>
-          <Typist.Backspace count={4} delay={2000} />
+          <Typist.Backspace count={4} delay={1000} />
           <span className="animationTyping">JavaScript</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">Visual Basic</span>
-          <Typist.Backspace count={12} delay={2000} />
+          <Typist.Backspace count={12} delay={1000} />
           <span className="animationTyping">HTML | CSS</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">PHP</span>
-          <Typist.Backspace count={3} delay={2000} />
+          <Typist.Backspace count={3} delay={1000} />
           <span className="animationTyping">PYTHON</span>
-          <Typist.Backspace count={6} delay={2000} />
+          <Typist.Backspace count={6} delay={1000} />
           <span className="animationTyping">CISCO PACKET TRACER</span>
-          <Typist.Backspace count={19} delay={2000} />
+          <Typist.Backspace count={19} delay={1000} />
           <span className="animationTyping">SQL</span>
-          <Typist.Backspace count={3} delay={2000} />
+          <Typist.Backspace count={3} delay={1000} />
           <span className="animationTyping">REACT NATIVE | REACT JS</span>
         </Typist>
 
@@ -130,9 +131,9 @@ const Home_cn = () => {
         <Typist className="typingName" cursor={{
             show: false,
           }}>
-        <Typist.Backspace count={0} delay={24000} />
+        <Typist.Backspace count={0} delay={25000} />
         <span className="description">
-          - Nicholas Tey Kai Jian -
+          - 郑凯键 -
         </span>
         </Typist>
       </Container>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Index from "./containers/Index";
 import Home_cn from "./containers/index_cn";
+import Contact from "./containers/English/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route path="/" component={Index} exact />
         <Route path="/Home_cn" component={Home_cn} />
+        <Route path="/Contact" component={Contact} />
       </Switch>
     </div>
     </BrowserRouter>

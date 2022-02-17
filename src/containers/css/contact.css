@@ -1,0 +1,23 @@
+.contactAbsoluteTop {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+  }
+  
+  .contactAbsoluteBottom {
+    border: 5px solid black;
+    height: 100%;
+    width: 100vw;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    
+  }
+
+  .contactCont {
+    width: 100vw;
+    height: 100vh;
+  }

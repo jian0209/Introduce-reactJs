@@ -15,15 +15,23 @@ import {
   API_GET_TEST_DATA,
 } from "../global/api";
 import Typist from "react-typist";
+import Contact from "./English/Contact";
+import { CommonStore } from "../Store/commonStore";
 
 const Index = () => {
   // useState
   const [language, setLanguage] = useState([]);
 
+  const currentNav = CommonStore.useState((s) => s.navCode);
+
   // useEffect
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    console.log(currentNav);
+  }, [currentNav]);
 
   // function
   const fetchData = async () => {
@@ -114,33 +122,33 @@ const Index = () => {
           }}
         >
           <span className="animationTyping">I'm a Web Developer.</span>
-          <Typist.Backspace count={21} delay={2000} />
+          <Typist.Backspace count={21} delay={1000} />
           <span className="animationTyping">I'm a Frontend Developer.</span>
-          <Typist.Backspace count={25} delay={2000} />
+          <Typist.Backspace count={25} delay={1000} />
           <span className="animationTyping">I'm a Application Developer.</span>
-          <Typist.Backspace count={28} delay={2000} />
+          <Typist.Backspace count={28} delay={1000} />
           <span className="animationTyping">
             I can learn everything with my best.
           </span>
-          <Typist.Backspace count={36} delay={2000} />
+          <Typist.Backspace count={36} delay={1000} />
           <div className="animationTyping">LEARNED</div>
           <Typist.Backspace count={0} delay={500} />
           <span className="animationTyping">JAVA</span>
-          <Typist.Backspace count={4} delay={2000} />
+          <Typist.Backspace count={4} delay={1000} />
           <span className="animationTyping">JavaScript</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">Visual Basic</span>
-          <Typist.Backspace count={12} delay={2000} />
+          <Typist.Backspace count={12} delay={1000} />
           <span className="animationTyping">HTML | CSS</span>
-          <Typist.Backspace count={10} delay={2000} />
+          <Typist.Backspace count={10} delay={1000} />
           <span className="animationTyping">PHP</span>
-          <Typist.Backspace count={3} delay={2000} />
+          <Typist.Backspace count={3} delay={1000} />
           <span className="animationTyping">PYTHON</span>
-          <Typist.Backspace count={6} delay={2000} />
+          <Typist.Backspace count={6} delay={1000} />
           <span className="animationTyping">CISCO PACKET TRACER</span>
-          <Typist.Backspace count={19} delay={2000} />
+          <Typist.Backspace count={19} delay={1000} />
           <span className="animationTyping">SQL</span>
-          <Typist.Backspace count={3} delay={2000} />
+          <Typist.Backspace count={3} delay={1000} />
           <span className="animationTyping">REACT NATIVE | REACT JS</span>
         </Typist>
 
@@ -151,7 +159,7 @@ const Index = () => {
         <Typist className="typingName" cursor={{
             show: false,
           }}>
-        <Typist.Backspace count={0} delay={24000} />
+        <Typist.Backspace count={0} delay={30000} />
         <span className="description">
           - Nicholas Tey Kai Jian -
         </span>
