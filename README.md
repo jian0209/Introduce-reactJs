@@ -1,3 +1,5 @@
+# Open cmd at the cloned folder
+
 # install dependencies
 $ `npm install`
 
