@@ -261,7 +261,7 @@ const Home_cn = () => {
             {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
           </div>
           <div id="contactButtonCont">
-            <a className="buttonStyle" href="Contact">
+            <a className="buttonStyle" href="Contact_cn">
               <SvgButton id="contactButton">了解更多</SvgButton>
             </a>
           </div>

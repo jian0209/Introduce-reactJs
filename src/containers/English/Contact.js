@@ -15,7 +15,7 @@ import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoSchoolOutline } from "react-icons/io5";
-import Footer from '../../Components/Footer';
+import Footer from "../../Components/Footer";
 
 const Contact = () => {
   // useState
@@ -58,7 +58,7 @@ const Contact = () => {
           </div>
         </Container>
         <Container id="contactTitle">
-          <p style={Font.title_en}>Contact Me</p>
+          <p style={Font.title_en}>About Me</p>
         </Container>
         <Container id="language">
           <Link
@@ -101,20 +101,21 @@ const Contact = () => {
           </div>
           <div id="contactIntroduction">
             <p style={Font.normalizeFont_en}>
-              I am a developer with web, software, and application with 1 year
-              experience in tech team, and a designer with AutoCad LT with 6
-              years experience. Currently, I am searching a job with develop
-              web, software or application.
+              I am a web, software and application developer with 1 year of
+              experience. Also a designer with 6 years of experience on AutoCad
+              LT. I am currently looking for a job in web design, software or
+              applications.
             </p>
             <p style={Font.normalizeFont_en}>
-              My thirst for knowledge has led me to study hard every day.
-              Meanwhile, I vastly improved the coding skills to upgrade my
-              efficiency at work, to make me work-life balance.
+              My thirst for knowledge makes me strive to learn every day. At the
+              same time, I have greatly improved my coding skills to increase my
+              productivity. Being efficient at work gives me a work-life
+              balance.
             </p>
             <p style={Font.normalizeFont_en}>
-              Me currently working as a Android | IOS | Web developer and is
-              always interested in a new challenge. Reach out to
-              jian000209@gmail.com.
+              I am currently an Android | IOS | Web Developer and am always
+              interested in new challenges. Always interested in new challenges.
+              If you are interested, please contact jian000209@gmail.com.
             </p>
           </div>
         </div>
@@ -392,7 +393,7 @@ const Contact = () => {
               Chung Hwa High School (Education)
             </p>
             <p style={Font.normalizeFont_en}>
-              I am a student who took the certificate with Unified Examination
+              I am a student who took the certificate of Unified Examination
               Certificate (UEC) with 1A, 3B, 1C. The strongest subject in UEC is
               Mathematics. Also, I am a discipline manager who manage the
               discipline of the society.
@@ -405,14 +406,13 @@ const Contact = () => {
               Asia Pacific University (Education)
             </p>
             <p style={Font.normalizeFont_en}>
-              I am a student who enrolled in Diploma of Information and
-              Communications Technology(Software Engineering), and I got a 3.15
-              CGPA out of a possible 4.0, and a 3.7 GPA or above for coding
-              courses like java, web development and visual basic.
-              Unfortunately, the online class was experienced during the school
-              year.This also resulted in my EVENT leaving me unsatisfied.
-              Luckily I was still able to participate in quite a few
-              competitions and online events.
+              I am a student enrolled in the Diploma of Information and
+              Communications Technology (Software Engineering) and I got a CGPA
+              of 3.15 out of 4.0 for coding courses such as java, web
+              development and visual basic GPA was also above 3.7.
+              Unfortunately, experienced online courses during the academic
+              year. Fortunately, I was still able to participate in some
+              competitions and online activities.
             </p>
           </div>
         ) : null}
@@ -422,11 +422,10 @@ const Contact = () => {
               Asia Pacific Language Centre (Event)
             </p>
             <p style={Font.normalizeFont_en}>
-              It is an activity to meet more people and to increase your social
-              and communication skills. What I liked most about this was the
-              activity that the event organizers came up with. It is a benefit
-              for introverts. It was almost as if we were interacting with each
-              other all the time except for the toilet.
+              This is an event to meet more people and increase your social and
+              communication skills. What I liked most was some of the activities
+              that the event organizers came up with. It's a benefit for
+              introverts.
             </p>
           </div>
         ) : null}
@@ -436,14 +435,15 @@ const Contact = () => {
               CyberSecurity Talk "Are You Safe" (Event)
             </p>
             <p style={Font.normalizeFont_en}>
-              This is an event that recognizes the issue of internet security
-              awareness around the world, with organizers presenting on stage
-              and practising how hackers can log into our computers or use
-              internet routers to take control of our computers and rob us of
-              our internet access. It made me realise that the hackers in the
-              movies are all frauds, but it also sparked my interest in
-              cybersecurity. If there is another event like this I will
-              definitely attend it!
+              This is an event to recognize the issue of Internet security. The
+              organizers presented the Internet security issues on stage. The
+              organizers presented and practiced on stage how hackers can log
+              into our computers or use internet routers to take control of our
+              computers and rob us of our internet access. It made me realize
+              that the hackers in the movie were all scammers. The hackers in
+              the movie were all crooks, but it also piqued my interest in
+              cybersecurity. If there is another event like this, I would love
+              to participate!
             </p>
           </div>
         ) : null}
@@ -465,10 +465,10 @@ const Contact = () => {
               Python Competition - "PYPRO" (Event)
             </p>
             <p style={Font.normalizeFont_en}>
-              It was my first intramural coding competition and of course I
-              didn't place on the field, although I did my best, but I was happy
-              that I gained a lot of experience and learned about the tension of
-              the competition.
+              This was my first intramural coding competition, and of course, I
+              didn't place on the field. Even though I tried my best, I felt
+              happy because I gained a lot of experience and learned about the
+              tension of the competition.
             </p>
           </div>
         ) : null}
@@ -478,11 +478,11 @@ const Contact = () => {
               Perksense Sdn Bhd (Part Time)
             </p>
             <p style={Font.normalizeFont_en}>
-              I found this company by chance as my part time, so I started to
-              work half time, and because this company agreed to let me work
-              from home, I took up a position as a developer, which helped me to
-              understand the difference between social programming and school,
-              and gave me a lot of experience in this area. - React Native |
+              I stumbled upon this company and it became my part-time job, so I
+              started working half-time. Since this company agreed to let me
+              work from home, I took a developer position, which helped me
+              understand the difference between social programming and school.
+              Also it gave me a lot of experience in this area. - React Native |
               React JS
             </p>
           </div>
@@ -503,8 +503,7 @@ const Contact = () => {
               Perksense Sdn Bhd (Full Time)
             </p>
             <p style={Font.normalizeFont_en}>
-              When I switched to junior, my post was upgraded along with it.
-              I've learned how to interview people at this company. - React
+            When I officially moved to full-time status, I was upgraded along with my position. At this company, I also learned how to interview people. - React
               Native | React JS
             </p>
           </div>

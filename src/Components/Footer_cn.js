@@ -21,7 +21,7 @@ import { ReactComponent as Gmail } from "../Assets/svg/gmail.svg";
 import { ReactComponent as LinkedIn } from "../Assets/svg/linked.svg";
 import { ReactComponent as GitHub } from "../Assets/svg/github.svg";
 
-const Footer = () => {
+const Footer_cn = () => {
   // useState
 
   // useEffect
@@ -33,28 +33,28 @@ const Footer = () => {
     <div className="footerMainCont">
       <div id="footerCont">
         <div id="footerContact">
-          <p id="contactText" style={Font.title_en}>Contact Me</p>
+          <p id="contactText" style={Font.title_en}>联络我</p>
           <div id="footerContactDetail">
             <a
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "black", marginRight: "10px" }}
               href="https://www.facebook.com/kaijian.tey"
             >
               <Facebook />
             </a>
             <a
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "black", marginRight: "10px" }}
               href="https://www.instagram.com/kjtey/"
             >
               <Instagram />
             </a>
             <a
-              style={{ textDecoration: "none", color: "black" }}
-              href="mailto:jian000209@gmail.com?subject=I am intersting with you"
+              style={{ textDecoration: "none", color: "black", marginRight: "10px" }}
+              href="mailto:jian000209@gmail.com?subject=我对你很感兴趣"
             >
               <Gmail />
             </a>
             <a
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "black", marginRight: "10px" }}
               href="https://github.com/jian0209"
             >
               <GitHub />
@@ -68,12 +68,12 @@ const Footer = () => {
           </div>
         </div>
         <div id="footerAbout">
-            <p id="aboutText" style={Font.subtitle_en}>Email: jian000209@gmail.com</p>
-                <p style={Font.subtitle_en}>Phone & WhatsApp: +60 18 632 0278</p>
+            <p id="aboutText" style={Font.subtitle_en}>电子邮件: jian000209@gmail.com</p>
+                <p style={Font.subtitle_en}>电话与WhatsApp: +60 18 632 0278</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Footer;
+export default Footer_cn;

@@ -28,7 +28,7 @@ const Font = {
     textAlign: 'justify',
   },
   title_cn: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
     color: Colors.primaryColor,
   },
