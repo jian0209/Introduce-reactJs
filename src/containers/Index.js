@@ -1,10 +1,11 @@
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container } from "@mui/material";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import Colors from "../Assets/Colors";
 import Font from "../Assets/Font";
 import "./css/index.css";
+import "animate.css";
 import logo from "../Assets/image/self_icon.png";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
@@ -15,8 +16,13 @@ import {
   API_GET_TEST_DATA,
 } from "../global/api";
 import Typist from "react-typist";
-import Contact from "./English/Contact";
 import { CommonStore } from "../Store/commonStore";
+import PropTypes from "prop-types";
+import ButtonUnstyled, {
+  buttonUnstyledClasses,
+} from "@mui/base/ButtonUnstyled";
+import { styled } from "@mui/system";
+
 
 const Index = () => {
   // useState
@@ -63,6 +69,123 @@ const Index = () => {
   //   // console.log(response.data);
 
   // };
+
+  // button style
+  const ButtonRoot = forwardRef(function ButtonRoot(props, ref) {
+    const { children, ...other } = props;
+
+    return (
+      <svg width="250" height="50" {...other} ref={ref}>
+        <polygon points="0,50 0,0 250,0 250,50" className="bg" />
+        <polygon points="0,50 0,0 250,0 250,50" className="borderEffect" />
+        <foreignObject x="0" y="0" width="250" height="50">
+          <div className="content">{children}</div>
+        </foreignObject>
+      </svg>
+    );
+  });
+
+  ButtonRoot.propTypes = {
+    children: PropTypes.node,
+  };
+
+  const blue = {
+    50: "#F0F7FF",
+    100: "#C2E0FF",
+    200: "#99CCF3",
+    400: "#3399FF",
+    500: "#007FFF",
+    600: "#0072E5",
+    800: "#004C99",
+    900: "#003A75",
+  };
+
+  const CustomButtonRoot = styled(ButtonRoot)(
+    ({ theme }) => `
+    overflow: visible;
+    cursor: pointer;
+    --main-color: ${
+      theme.palette.mode === "light" ? Colors.secondaryColor : blue[100]
+    };
+    --hover-color: ${
+      theme.palette.mode === "light" ? Colors.lightSecondaryColor : blue[900]
+    };
+    --active-color: ${
+      theme.palette.mode === "light" ? Colors.lightPrimaryColor : blue[800]
+    };
+  
+    & polygon {
+      fill: transparent;
+      transition: all 800ms ease;
+      pointer-events: none;
+    }
+    
+    & .bg {
+      stroke: var(--main-color);
+      stroke-width: 1;
+      filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1));
+      fill: transparent;
+    }
+  
+    & .borderEffect {
+      stroke: var(--main-color);
+      stroke-width: 2;
+      stroke-dasharray: 150 600;
+      stroke-dashoffset: 150;
+      fill: transparent;
+    }
+  
+    &:hover,
+    &.${buttonUnstyledClasses.focusVisible} {
+      .borderEffect {
+        stroke-dashoffset: -600;
+      }
+  
+      .bg {
+        fill: var(--hover-color);
+      }
+    }
+  
+    &:focus,
+    &.${buttonUnstyledClasses.focusVisible} {
+      outline: 2px solid ${
+        theme.palette.mode === "dark" ? Colors.lightSecondaryColor : blue[200]
+      };
+      outline-offset: 2px;
+    }
+  
+    &.${buttonUnstyledClasses.active} { 
+      & .bg {
+        fill: var(--active-color);
+        transition: fill 300ms ease-out;
+      }
+    }
+  
+    & foreignObject {
+      pointer-events: none;
+  
+      & .content {
+        font-size: 0.875rem;
+        font-family: IBM Plex Sans, sans-serif;
+        font-weight: 500;
+        line-height: 1.5;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--main-color);
+        text-transform: uppercase;
+      }
+  
+      & svg {
+        margin: 0 5px;
+      }
+    }`
+  );
+
+  const SvgButton = React.forwardRef(function SvgButton(props, ref) {
+    return <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />;
+  });
 
   return (
     <div className="cont1">
@@ -114,57 +237,92 @@ const Index = () => {
         </Container>
       </div>
       {/* absolute bottom container */}
-      <Container className="absoluteBottom">
-        <Typist
-          className="animationTypingMain"
-          cursor={{
-            show: false,
-          }}
-        >
-          <span className="animationTyping">I'm a Web Developer.</span>
-          <Typist.Backspace count={21} delay={1000} />
-          <span className="animationTyping">I'm a Frontend Developer.</span>
-          <Typist.Backspace count={25} delay={1000} />
-          <span className="animationTyping">I'm a Application Developer.</span>
-          <Typist.Backspace count={28} delay={1000} />
-          <span className="animationTyping">
-            I can learn everything with my best.
-          </span>
-          <Typist.Backspace count={36} delay={1000} />
-          <div className="animationTyping">LEARNED</div>
-          <Typist.Backspace count={0} delay={500} />
-          <span className="animationTyping">JAVA</span>
-          <Typist.Backspace count={4} delay={1000} />
-          <span className="animationTyping">JavaScript</span>
-          <Typist.Backspace count={10} delay={1000} />
-          <span className="animationTyping">Visual Basic</span>
-          <Typist.Backspace count={12} delay={1000} />
-          <span className="animationTyping">HTML | CSS</span>
-          <Typist.Backspace count={10} delay={1000} />
-          <span className="animationTyping">PHP</span>
-          <Typist.Backspace count={3} delay={1000} />
-          <span className="animationTyping">PYTHON</span>
-          <Typist.Backspace count={6} delay={1000} />
-          <span className="animationTyping">CISCO PACKET TRACER</span>
-          <Typist.Backspace count={19} delay={1000} />
-          <span className="animationTyping">SQL</span>
-          <Typist.Backspace count={3} delay={1000} />
-          <span className="animationTyping">REACT NATIVE | REACT JS</span>
-        </Typist>
+      {currentNav === 0 ? (
+        <Container className="absoluteBottom">
+          <Typist
+            className="animationTypingMain"
+            cursor={{
+              show: false,
+            }}
+          >
+            <span className="animationTyping">I'm a Web Developer.</span>
+            <Typist.Backspace count={21} delay={1000} />
+            <span className="animationTyping">I'm a Frontend Developer.</span>
+            <Typist.Backspace count={25} delay={1000} />
+            <span className="animationTyping">
+              I'm a Application Developer.
+            </span>
+            <Typist.Backspace count={28} delay={1000} />
+            <span className="animationTyping">
+              I can learn everything with my best.
+            </span>
+            <Typist.Backspace count={36} delay={1000} />
+            <div className="animationTyping">LEARNED</div>
+            <Typist.Backspace count={0} delay={500} />
+            <span className="animationTyping">JAVA</span>
+            <Typist.Backspace count={4} delay={1000} />
+            <span className="animationTyping">JavaScript</span>
+            <Typist.Backspace count={10} delay={1000} />
+            <span className="animationTyping">Visual Basic</span>
+            <Typist.Backspace count={12} delay={1000} />
+            <span className="animationTyping">HTML | CSS</span>
+            <Typist.Backspace count={10} delay={1000} />
+            <span className="animationTyping">PHP</span>
+            <Typist.Backspace count={3} delay={1000} />
+            <span className="animationTyping">PYTHON</span>
+            <Typist.Backspace count={6} delay={1000} />
+            <span className="animationTyping">CISCO PACKET TRACER</span>
+            <Typist.Backspace count={19} delay={1000} />
+            <span className="animationTyping">SQL</span>
+            <Typist.Backspace count={3} delay={1000} />
+            <span className="animationTyping">REACT NATIVE | REACT JS</span>
+          </Typist>
 
-        <p className="description">
-          I'm a startup software developer, Fresh Graduate Student, and Frontend
-          Designer who loves ambitious challenges, study, and energetic. Currently, I learning node js as the backend of my project.
-        </p>
-        <Typist className="typingName" cursor={{
-            show: false,
-          }}>
-        <Typist.Backspace count={0} delay={30000} />
-        <span className="description">
-          - Nicholas Tey Kai Jian -
-        </span>
-        </Typist>
-      </Container>
+          <p className="description">
+            I'm a startup software developer, Fresh Graduate Student, and
+            Frontend Designer who loves ambitious challenges, study, and
+            energetic. Currently, I learning node js as the backend of my
+            project.
+          </p>
+          <Typist
+            className="typingName"
+            cursor={{
+              show: false,
+            }}
+          >
+            <Typist.Backspace count={0} delay={30000} />
+            <span className="description">- Nicholas Tey Kai Jian -</span>
+          </Typist>
+        </Container>
+      ) : null}
+
+      {currentNav === 3 ? (
+        <Container className="absoluteBottom" id="contactCont">
+          <div className="whoAmI">
+            <p style={Font.title_en}>Who Am I?</p>
+            <p style={Font.normalizeFont_en}>
+              Jian is a Software Developer, junior leader and a fresh graduate
+              student, with experience interviewing, leading, and managing the
+              small team in his internship. He has a background of 7 years
+              working. The previous company is to work with design with AutoCad
+              and manage the worker at back. The internship company is to work
+              with develop the website, ios and android application with react
+              js, and react native. On the university, he learned java, python,
+              visual basic, sql, and web development.
+            </p>
+          </div>
+          <div className="contactImage">
+            <p>Personal Image here</p>
+            {/* logo */}
+            {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
+          </div>
+          <div id="contactButtonCont">
+            <a className="buttonStyle" href="Contact">
+              <SvgButton id="contactButton">get in touch</SvgButton>
+            </a>
+          </div>
+        </Container>
+      ) : null}
     </div>
   );
 };

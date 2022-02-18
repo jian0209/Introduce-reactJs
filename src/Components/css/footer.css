@@ -1,0 +1,42 @@
+.footerMainCont {
+    margin-top: 50px;
+    height: 150px;
+    width: 99vw;
+    background-color: #a992ad;
+    padding: 20px 10vw;
+}
+
+#footerCont{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footerContactDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footerAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+    #footerCont{
+        flex-direction: column;
+    }
+
+    .footerMainCont {
+        margin-top: 50px;
+        height: 300px;
+        width: 100vw;
+    }
+}

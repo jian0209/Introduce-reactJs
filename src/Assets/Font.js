@@ -14,17 +14,18 @@ const Font = {
   title_en: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: Colors.primaryColor,
+    color: Colors.secondaryColor,
   },
   subtitle_en: {
     fontSize: 24,
     fontWeight: "regular",
-    color: Colors.lightPrimaryColor,
+    color: Colors.lightSecondaryColor,
   },
   normalizeFont_en: {
     fontSize: 18,
     fontWeight: "regular",
     color: Colors.greyColor,
+    textAlign: 'justify',
   },
   title_cn: {
     fontSize: 16,
