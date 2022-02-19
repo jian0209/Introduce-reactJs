@@ -8,6 +8,7 @@ import "./css/index.css";
 import "animate.css";
 import logo from "../Assets/image/self_icon.png";
 import Header_cn from "../Components/header_cn";
+import normal from "../Assets/image/normal.jpg";
 import Link from "@mui/material/Link";
 import Typist from "react-typist";
 import { CommonStore } from "../Store/commonStore";
@@ -255,10 +256,8 @@ const Home_cn = () => {
               郑凯键是一名软体开发者，小领队， 和社会新鲜人。他拥有当面试者，带领团队和管理小团队的经验。他还拥有了7年的工作历史。郑凯键在一开始的公司担任了管理员和设计师。他在一开始的公司学习了如何管理和autocad的使用方式。在实习的公司， 他学习了团队作业，使用react开发网页， ios和Android的应用程序。他在大学也学习了java， python， visual basic， html， css， sql， cisco packet tracer。
             </p>
           </div>
-          <div className="contactImage">
-            <p>Personal Image here</p>
-            {/* logo */}
-            {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
+          <div className="contactImage animate__animated animate__bounceInRight">
+            <img src={normal} alt="Logo" id="contactImage" height="450" />
           </div>
           <div id="contactButtonCont">
             <a className="buttonStyle" href="Contact_cn">

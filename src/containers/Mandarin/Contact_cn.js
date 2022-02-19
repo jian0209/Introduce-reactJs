@@ -6,6 +6,7 @@ import Colors from "../../Assets/Colors";
 import Font from "../../Assets/Font";
 import "../css/contact.css";
 import logo from "../../Assets/image/self_icon.png";
+import smile from "../../Assets/image/smile.jpg";
 import Link from "@mui/material/Link";
 import { ReactComponent as Back } from "../../Assets/svg/back-arrow.svg";
 import { TreeView, TreeItem } from "@mui/lab";
@@ -46,6 +47,7 @@ const Contact = () => {
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
+          zIndex: 1000,
           // paddingHorizontal: '5vw',
         }}
       >
@@ -97,7 +99,7 @@ const Contact = () => {
         {/* describe */}
         <div className="contactMainCont">
           <div id="imgHere">
-            <p>Image here</p>
+          <img src={smile} alt="profile" class="animate__animated animate__fadeInDown" height="390" />
           </div>
           <div id="contactIntroduction">
             <p style={Font.normalizeFont_en}>

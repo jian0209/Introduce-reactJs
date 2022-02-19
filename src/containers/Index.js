@@ -7,6 +7,7 @@ import Font from "../Assets/Font";
 import "./css/index.css";
 import "animate.css";
 import logo from "../Assets/image/self_icon.png";
+import normal from "../Assets/image/normal.jpg";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
 import axios from "axios";
@@ -298,7 +299,8 @@ const Index = () => {
 
       {currentNav === 3 ? (
         <Container className="absoluteBottom" id="contactCont">
-          <div className="whoAmI">
+          <div className="whoAmI animate__animated animate__bounceInLeft">
+            <img src={logo} alt="Logo" class="animate__animated animate__fadeInDown" height="150" />
             <p style={Font.title_en}>Who Am I?</p>
             <p style={Font.normalizeFont_en}>
               Jian is a Software Developer, junior leader and a fresh graduate
@@ -311,8 +313,8 @@ const Index = () => {
               visual basic, sql, and web development.
             </p>
           </div>
-          <div className="contactImage">
-            <p>Personal Image here</p>
+          <div className="contactImage animate__animated animate__bounceInRight">
+            <img src={normal} alt="Logo" id="contactImage" height="450" />
             {/* logo */}
             {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
           </div>

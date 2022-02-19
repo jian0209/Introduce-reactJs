@@ -85,6 +85,27 @@
 
 #imgHere {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E0CEBA;
+}
+
+.Timeline-wrapper-1{
+  /* border: 1px black solid; */
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+#profileImage{
+  height: 350px;
+  width: 350px;
+}
+
+@media screen and (max-width: 795px) {
+  .contactMainCont {
+    flex-direction: column;
+  }
 }
 
 #contactIntroduction {
