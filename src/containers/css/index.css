@@ -69,12 +69,15 @@ body p {
   overflow: hidden;
 }
 
-.cardContent p{
+.cardContent p {
   margin: 0;
-
 }
 
-#footerContactDetail{
+.skills{
+  background-color: #655767;
+}
+
+#footerContactDetail {
   /* border:  1px solid black; */
   max-width: 230px;
   margin: 0 auto;

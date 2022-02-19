@@ -334,11 +334,6 @@ const Home_cn = () => {
               </Grid>
             </Grid>
           </div>
-          <div id="contactButtonCont">
-            <a className="buttonStyle" href="Contact">
-              <SvgButton id="contactButton">了解更多</SvgButton>
-            </a>
-          </div>
         </Container>
       ) : null}
 

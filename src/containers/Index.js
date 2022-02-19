@@ -337,7 +337,7 @@ const Index = () => {
               </Grid>
               <Grid item xs={8}>
                 <Card>
-                  <CardActionArea id="skillLanguage">
+                  <CardActionArea className="skills">
                     <img
                       src={languageLogo}
                       alt="Logo"
@@ -357,7 +357,7 @@ const Index = () => {
               </Grid>
               <Grid item xs={8}>
                 <Card>
-                  <CardActionArea id="skillHabit">
+                  <CardActionArea className="skills">
                     <img
                       src={habit}
                       alt="Logo"
@@ -377,7 +377,7 @@ const Index = () => {
               </Grid>
               <Grid item xs={8}>
                 <Card>
-                  <CardActionArea id="skillLanguage">
+                  <CardActionArea className="skills">
                     <img
                       src={other}
                       alt="Logo"
