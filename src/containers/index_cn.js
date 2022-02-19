@@ -7,6 +7,11 @@ import Font from "../Assets/Font";
 import "./css/index.css";
 import "animate.css";
 import logo from "../Assets/image/self_icon.png";
+import coding from "../Assets/image/coding.png";
+import habit from "../Assets/image/habit.png";
+import laugh from "../Assets/image/laugh.jpg";
+import languageLogo from "../Assets/image/language.png";
+import other from "../Assets/image/other.png";
 import Header_cn from "../Components/header_cn";
 import normal from "../Assets/image/normal.jpg";
 import Link from "@mui/material/Link";
@@ -17,6 +22,13 @@ import ButtonUnstyled, {
   buttonUnstyledClasses,
 } from "@mui/base/ButtonUnstyled";
 import { styled } from "@mui/system";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea } from "@mui/material";
+import { ReactComponent as LinkedIn } from "../Assets/svg/linkedInBig.svg";
+import { ReactComponent as GitHub } from "../Assets/svg/githubBig.svg";
 
 const Home_cn = () => {
   // useState
@@ -247,6 +259,114 @@ const Home_cn = () => {
           </Typist>
         </Container>
       ) : null}
+
+{currentNav === 1 ? (
+        <Container className="absoluteBottom">
+          <div className="skillTop">
+            <Grid container spacing={5} columns={16}>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="coding">
+                    <img
+                      src={coding}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent className="cardContent" style={{
+                      padding: '2vh',
+                    }}>
+                      <p style={Font.title_en}>编程</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="skillLanguage">
+                    <img
+                      src={languageLogo}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent className="cardContent" style={{
+                      padding: '2vh',
+                    }}>
+                      <p style={Font.title_en}>语言</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="skillHabit">
+                    <img
+                      src={habit}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent className="cardContent" style={{
+                      padding: '2vh',
+                    }}>
+                      <p style={Font.title_en}>爱好</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="skillLanguage">
+                    <img
+                      src={other}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent className="cardContent" style={{
+                      padding: '2vh',
+                    }}>
+                      <p style={Font.title_en}>其他</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            </Grid>
+          </div>
+          <div id="contactButtonCont">
+            <a className="buttonStyle" href="Contact">
+              <SvgButton id="contactButton">了解更多</SvgButton>
+            </a>
+          </div>
+        </Container>
+      ) : null}
+
+{currentNav === 2 ? (
+        <Container className="absoluteBottom" id="contactCont">
+          <div className="contactImage animate__animated animate__bounceInRight">
+            <img src={laugh} alt="Logo" id="contactImage" height="450" />
+          </div>
+          <div className="whoAmI animate__animated animate__bounceInLeft">
+            
+          <div id="footerContactDetail">
+            <a
+              style={{ textDecoration: "none", color: "black" }}
+              href="https://github.com/jian0209"
+            >
+              <GitHub />
+            </a>
+            <a
+              style={{ textDecoration: "none", color: "black" }}
+              href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+            >
+              <LinkedIn />
+            </a>
+          </div>
+          </div>
+        </Container>
+      ) : null}
+
 
       {currentNav === 3 ? (
         <Container className="absoluteBottom" id="contactCont">

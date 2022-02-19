@@ -69,6 +69,32 @@ body p {
   overflow: hidden;
 }
 
+.cardContent p{
+  margin: 0;
+
+}
+
+#footerContactDetail{
+  /* border:  1px solid black; */
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+.centerImage {
+  position: relative;
+  left: 50%;
+  /* top: 50%; */
+  transform: translate(-50%, 0);
+}
+
+#coding {
+  background-color: #1e2d41;
+}
+
+.skillTop {
+  padding-top: 50px;
+}
+
 .whoAmI {
   width: 50%;
 }

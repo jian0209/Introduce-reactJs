@@ -8,6 +8,11 @@ import "./css/index.css";
 import "animate.css";
 import logo from "../Assets/image/self_icon.png";
 import normal from "../Assets/image/normal.jpg";
+import laugh from "../Assets/image/laugh.jpg";
+import coding from "../Assets/image/coding.png";
+import habit from "../Assets/image/habit.png";
+import languageLogo from "../Assets/image/language.png";
+import other from "../Assets/image/other.png";
 import Header from "../Components/header";
 import Link from "@mui/material/Link";
 import axios from "axios";
@@ -23,7 +28,13 @@ import ButtonUnstyled, {
   buttonUnstyledClasses,
 } from "@mui/base/ButtonUnstyled";
 import { styled } from "@mui/system";
-
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea } from "@mui/material";
+import { ReactComponent as LinkedIn } from "../Assets/svg/linkedInBig.svg";
+import { ReactComponent as GitHub } from "../Assets/svg/githubBig.svg";
 
 const Index = () => {
   // useState
@@ -199,6 +210,7 @@ const Index = () => {
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
+          zIndex: 5,
           // paddingHorizontal: '5vw',
         }}
       >
@@ -297,10 +309,131 @@ const Index = () => {
         </Container>
       ) : null}
 
+      {currentNav === 1 ? (
+        <Container className="absoluteBottom">
+          <div className="skillTop">
+            <Grid container spacing={5} columns={16}>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea onClick={() => {
+
+                  }} id="coding">
+                    <img
+                      src={coding}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
+                      <p style={Font.title_en}>CODING</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="skillLanguage">
+                    <img
+                      src={languageLogo}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
+                      <p style={Font.title_en}>LANGUAGE</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="skillHabit">
+                    <img
+                      src={habit}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
+                      <p style={Font.title_en}>HABIT</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card>
+                  <CardActionArea id="skillLanguage">
+                    <img
+                      src={other}
+                      alt="Logo"
+                      class="centerImage"
+                      height="150"
+                    />
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
+                      <p style={Font.title_en}>OTHER</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            </Grid>
+          </div>
+        </Container>
+      ) : null}
+
+      {currentNav === 2 ? (
+        <Container className="absoluteBottom" id="contactCont">
+          <div className="contactImage animate__animated animate__bounceInRight">
+            <img src={laugh} alt="Logo" id="contactImage" height="450" />
+          </div>
+          <div className="whoAmI animate__animated animate__bounceInLeft">
+            
+          <div id="footerContactDetail">
+            <a
+              style={{ textDecoration: "none", color: "black" }}
+              href="https://github.com/jian0209"
+            >
+              <GitHub />
+            </a>
+            <a
+              style={{ textDecoration: "none", color: "black" }}
+              href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+            >
+              <LinkedIn />
+            </a>
+          </div>
+          </div>
+        </Container>
+      ) : null}
+
       {currentNav === 3 ? (
         <Container className="absoluteBottom" id="contactCont">
           <div className="whoAmI animate__animated animate__bounceInLeft">
-            <img src={logo} alt="Logo" class="animate__animated animate__fadeInDown" height="150" />
+            <img
+              src={logo}
+              alt="Logo"
+              class="animate__animated animate__fadeInDown"
+              height="150"
+            />
             <p style={Font.title_en}>Who Am I?</p>
             <p style={Font.normalizeFont_en}>
               Jian is a Software Developer, junior leader and a fresh graduate
