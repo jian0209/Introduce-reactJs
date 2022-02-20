@@ -1,7 +1,7 @@
 {
   "name": "introduce-my-self",
   "version": "0.1.0",
-  "homepage": "https://jian0209.github.io/IntroducePortfolio/",
+  "homepage": "https://jian0209.github.io/introduce-portfolio/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",

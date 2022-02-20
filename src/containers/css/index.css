@@ -112,12 +112,6 @@ body p {
   top: 15vh;
 }
 
-#contactButton {
-  /* position:absolute;
-  bottom: 10vh;
-  right: 40vw; */
-}
-
 #contactButtonCont {
   position: absolute;
   top: 85%;
