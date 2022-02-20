@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/introduce-portfolio/static/css/main.f1c82e4e.css",
+    "main.js": "/introduce-portfolio/static/js/main.dade311a.js",
+    "static/media/normal.jpg": "/introduce-portfolio/static/media/normal.0557d37c5d49f3e625ad.jpg",
+    "static/media/laugh.jpg": "/introduce-portfolio/static/media/laugh.8f1b3121409944645e0a.jpg",
+    "static/media/smile.jpg": "/introduce-portfolio/static/media/smile.6445e11f39ed04aa15a9.jpg",
+    "static/media/language.png": "/introduce-portfolio/static/media/language.dffa0c7a712f8c640c77.png",
+    "static/media/mainBackground.png": "/introduce-portfolio/static/media/mainBackground.b08e9b6984bebd71d756.png",
+    "static/media/other.png": "/introduce-portfolio/static/media/other.71d69a1b8121a3737215.png",
+    "static/media/self_icon.png": "/introduce-portfolio/static/media/self_icon.8b01e7c4aefc4192df4d.png",
+    "static/media/coding.png": "/introduce-portfolio/static/media/coding.422d7c99b35b75e5afc6.png",
+    "index.html": "/introduce-portfolio/index.html",
+    "static/media/instagram.svg": "/introduce-portfolio/static/media/instagram.c8aa5e89e22402653764c574ea04330d.svg",
+    "static/media/githubBig.svg": "/introduce-portfolio/static/media/githubBig.550baed4311372291d17f6c81d50d8e4.svg",
+    "static/media/github.svg": "/introduce-portfolio/static/media/github.9e532ea47d9d1e1e0650f19355f8379a.svg",
+    "static/media/linked.svg": "/introduce-portfolio/static/media/linked.4b8d4433c345e0b703466a00e7cb8fbf.svg",
+    "static/media/linkedInBig.svg": "/introduce-portfolio/static/media/linkedInBig.664c9a442ac6d48841d3462714b88ca5.svg",
+    "static/media/gmail.svg": "/introduce-portfolio/static/media/gmail.8d3665c8f571176af121e461b97c4aaf.svg",
+    "static/media/facebook.svg": "/introduce-portfolio/static/media/facebook.8896bb6e825465ad81383f9b6b392346.svg",
+    "static/media/back-arrow.svg": "/introduce-portfolio/static/media/back-arrow.452b617a3e10240d2cdd20791f0c9452.svg",
+    "main.f1c82e4e.css.map": "/introduce-portfolio/static/css/main.f1c82e4e.css.map",
+    "main.dade311a.js.map": "/introduce-portfolio/static/js/main.dade311a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1c82e4e.css",
+    "static/js/main.dade311a.js"
+  ]
+}
