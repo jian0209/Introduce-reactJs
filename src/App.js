@@ -8,7 +8,7 @@ import Contact from "./containers/English/Contact";
 import Contact_cn from "./containers/Mandarin/Contact_cn";
 
 function App() {
-  const [isDev, setIsDev] = useState(false);
+  const [isDev, setIsDev] = useState(true);
   return (
     <BrowserRouter>
       {isDev ? (
