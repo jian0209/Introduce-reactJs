@@ -87,10 +87,10 @@ const Index = () => {
     const { children, ...other } = props;
 
     return (
-      <svg width="250" height="50" {...other} ref={ref}>
-        <polygon points="0,50 0,0 250,0 250,50" className="bg" />
-        <polygon points="0,50 0,0 250,0 250,50" className="borderEffect" />
-        <foreignObject x="0" y="0" width="250" height="50">
+      <svg width="200" height="50" {...other} ref={ref}>
+        <polygon points="0,50 0,0 200,0 200,50" className="bg" />
+        <polygon points="0,50 0,0 200,0 200,50" className="borderEffect" />
+        <foreignObject x="0" y="0" width="200" height="50">
           <div className="content">{children}</div>
         </foreignObject>
       </svg>
@@ -200,264 +200,263 @@ const Index = () => {
   });
 
   return (
-    <div className="cont1">
-      {/* absolute top container */}
-      <div
-        className="absoluteTop"
-        style={{
-          backgroundColor: Colors.lightPrimaryColor,
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          zIndex: 5,
-          // paddingHorizontal: '5vw',
-        }}
-      >
-        <Container id="topNav">
-          <Header />
-        </Container>
-        <Container id="language">
-          <Link
-            component="button"
-            href=""
-            color={Colors.secondaryColor}
-            underline="hover"
-            style={{ marginRight: 15 }}
-            onClick={() => {}}
-          >
-            <a
-              style={{ textDecoration: "none", color: Colors.darkGoldColor }}
+    <div>
+      <div className="cont1">
+        {/* absolute top container */}
+        <div
+          className="absoluteTop"
+          style={{
+            backgroundColor: Colors.lightPrimaryColor,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            zIndex: 5,
+            // paddingHorizontal: '5vw',
+          }}
+        >
+          <Container id="topNav">
+            <Header />
+          </Container>
+          <Container id="language">
+            <Link
+              component="button"
               href=""
+              color={Colors.secondaryColor}
+              underline="hover"
+              style={{ marginRight: 15 }}
+              onClick={() => {}}
             >
-              English
-            </a>
-          </Link>
-          <Link
-            component="button"
-            href="/introduce-portfolio/Home_cn/"
-            color={Colors.secondaryColor}
-            underline="hover"
-            onClick={() => {}}
-          >
-            <a
-              style={{ textDecoration: "none", color: Colors.darkGoldColor }}
+              <a
+                style={{ textDecoration: "none", color: Colors.darkGoldColor }}
+                href=""
+              >
+                English
+              </a>
+            </Link>
+            <Link
+              component="button"
               href="/introduce-portfolio/Home_cn/"
+              color={Colors.secondaryColor}
+              underline="hover"
+              onClick={() => {}}
             >
-              Mandarin
-            </a>
-          </Link>
-        </Container>
-      </div>
-      {/* absolute bottom container */}
-      {currentNav === 0 ? (
-        <Container className="absoluteBottom">
-          <Typist
-            className="animationTypingMain"
-            cursor={{
-              show: false,
-            }}
-          >
-            <span className="animationTyping">I'm a Web Developer.</span>
-            <Typist.Backspace count={21} delay={1000} />
-            <span className="animationTyping">I'm a Frontend Developer.</span>
-            <Typist.Backspace count={25} delay={1000} />
-            <span className="animationTyping">
-              I'm a Application Developer.
-            </span>
-            <Typist.Backspace count={28} delay={1000} />
-            <span className="animationTyping">
-              I can learn everything with my best.
-            </span>
-            <Typist.Backspace count={36} delay={1000} />
-            <div className="animationTyping">LEARNED</div>
-            <Typist.Backspace count={0} delay={500} />
-            <span className="animationTyping">JAVA</span>
-            <Typist.Backspace count={4} delay={1000} />
-            <span className="animationTyping">JavaScript</span>
-            <Typist.Backspace count={10} delay={1000} />
-            <span className="animationTyping">Visual Basic</span>
-            <Typist.Backspace count={12} delay={1000} />
-            <span className="animationTyping">HTML | CSS</span>
-            <Typist.Backspace count={10} delay={1000} />
-            <span className="animationTyping">PHP</span>
-            <Typist.Backspace count={3} delay={1000} />
-            <span className="animationTyping">PYTHON</span>
-            <Typist.Backspace count={6} delay={1000} />
-            <span className="animationTyping">CISCO PACKET TRACER</span>
-            <Typist.Backspace count={19} delay={1000} />
-            <span className="animationTyping">SQL</span>
-            <Typist.Backspace count={3} delay={1000} />
-            <span className="animationTyping">REACT NATIVE | REACT JS</span>
-          </Typist>
-
-          <p className="description">
-            I'm a startup software developer, Fresh Graduate Student, and
-            Frontend Designer who loves ambitious challenges, study, and
-            energetic. Currently, I learning node js as the backend of my
-            project.
-          </p>
-          <Typist
-            className="typingName"
-            cursor={{
-              show: false,
-            }}
-          >
-            <Typist.Backspace count={0} delay={30000} />
-            <span className="description">- Nicholas Tey Kai Jian -</span>
-          </Typist>
-        </Container>
-      ) : null}
-
-      {currentNav === 1 ? (
-        <Container className="absoluteBottom">
-          <div className="skillTop">
-            <Grid container spacing={5} columns={16}>
-              <Grid item xs={8}>
-                <Card>
-                  <CardActionArea onClick={() => {
-
-                  }} id="coding">
-                    <img
-                      src={coding}
-                      alt="Logo"
-                      class="centerImage"
-                      height="150"
-                    />
-                    <CardContent
-                      className="cardContent"
-                      style={{
-                        padding: "2vh",
-                      }}
-                    >
-                      <p style={Font.title_en}>CODING</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-              <Grid item xs={8}>
-                <Card>
-                  <CardActionArea className="skills">
-                    <img
-                      src={languageLogo}
-                      alt="Logo"
-                      class="centerImage"
-                      height="150"
-                    />
-                    <CardContent
-                      className="cardContent"
-                      style={{
-                        padding: "2vh",
-                      }}
-                    >
-                      <p style={Font.title_en}>LANGUAGE</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-              <Grid item xs={8}>
-                <Card>
-                  <CardActionArea className="skills">
-                    <img
-                      src={habit}
-                      alt="Logo"
-                      class="centerImage"
-                      height="150"
-                    />
-                    <CardContent
-                      className="cardContent"
-                      style={{
-                        padding: "2vh",
-                      }}
-                    >
-                      <p style={Font.title_en}>HABIT</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-              <Grid item xs={8}>
-                <Card>
-                  <CardActionArea className="skills">
-                    <img
-                      src={other}
-                      alt="Logo"
-                      class="centerImage"
-                      height="150"
-                    />
-                    <CardContent
-                      className="cardContent"
-                      style={{
-                        padding: "2vh",
-                      }}
-                    >
-                      <p style={Font.title_en}>OTHER</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-            </Grid>
-          </div>
-        </Container>
-      ) : null}
-
-      {currentNav === 2 ? (
-        <Container className="absoluteBottom" id="contactCont">
-          <div className="contactImage animate__animated animate__bounceInRight">
-            <img src={laugh} alt="Logo" id="contactImage" height="450" />
-          </div>
-          <div className="whoAmI animate__animated animate__bounceInLeft">
-            
-          <div id="footerContactDetail">
-            <a
-              style={{ textDecoration: "none", color: "black" }}
-              href="https://github.com/jian0209"
+              <a
+                style={{ textDecoration: "none", color: Colors.darkGoldColor }}
+                href="/introduce-portfolio/Home_cn/"
+              >
+                Mandarin
+              </a>
+            </Link>
+          </Container>
+        </div>
+        {/* absolute bottom container */}
+        {currentNav === 0 ? (
+          <Container className="absoluteBottom">
+            <Typist
+              className="animationTypingMain"
+              cursor={{
+                show: false,
+              }}
             >
-              <GitHub />
-            </a>
-            <a
-              style={{ textDecoration: "none", color: "black" }}
-              href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
-            >
-              <LinkedIn />
-            </a>
-          </div>
-          </div>
-        </Container>
-      ) : null}
+              <span className="animationTyping">I'm a Web Developer.</span>
+              <Typist.Backspace count={21} delay={1000} />
+              <span className="animationTyping">I'm a Frontend Developer.</span>
+              <Typist.Backspace count={25} delay={1000} />
+              <span className="animationTyping">
+                I'm a Application Developer.
+              </span>
+              <Typist.Backspace count={28} delay={1000} />
+              <span className="animationTyping">
+                I can learn everything with my best.
+              </span>
+              <Typist.Backspace count={36} delay={1000} />
+              <div className="animationTyping">LEARNED</div>
+              <Typist.Backspace count={0} delay={500} />
+              <span className="animationTyping">JAVA</span>
+              <Typist.Backspace count={4} delay={1000} />
+              <span className="animationTyping">JavaScript</span>
+              <Typist.Backspace count={10} delay={1000} />
+              <span className="animationTyping">Visual Basic</span>
+              <Typist.Backspace count={12} delay={1000} />
+              <span className="animationTyping">HTML | CSS</span>
+              <Typist.Backspace count={10} delay={1000} />
+              <span className="animationTyping">PHP</span>
+              <Typist.Backspace count={3} delay={1000} />
+              <span className="animationTyping">PYTHON</span>
+              <Typist.Backspace count={6} delay={1000} />
+              <span className="animationTyping">CISCO PACKET TRACER</span>
+              <Typist.Backspace count={19} delay={1000} />
+              <span className="animationTyping">SQL</span>
+              <Typist.Backspace count={3} delay={1000} />
+              <span className="animationTyping">REACT NATIVE | REACT JS</span>
+            </Typist>
 
-      {currentNav === 3 ? (
-        <Container className="absoluteBottom" id="contactCont">
-          <div className="whoAmI animate__animated animate__bounceInLeft">
-            <img
-              src={logo}
-              alt="Logo"
-              class="animate__animated animate__fadeInDown"
-              height="150"
-            />
-            <p style={Font.title_en}>Who Am I?</p>
-            <p style={Font.normalizeFont_en}>
-              Jian is a Software Developer, junior leader and a fresh graduate
-              student, with experience interviewing, leading, and managing the
-              small team in his internship. He has a background of 7 years
-              working. The previous company is to work with design with AutoCad
-              and manage the worker at back. The internship company is to work
-              with develop the website, ios and android application with react
-              js, and react native. On the university, he learned java, python,
-              visual basic, sql, and web development.
+            <p className="description">
+              I'm a startup software developer, Fresh Graduate Student, and
+              Frontend Designer who loves ambitious challenges, study, and
+              energetic. Currently, I learning node js as the backend of my
+              project.
             </p>
-          </div>
-          <div className="contactImage animate__animated animate__bounceInRight">
-            <img src={normal} alt="Logo" id="contactImage" height="450" />
-            {/* logo */}
-            {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
-          </div>
-          <div id="contactButtonCont">
-            <a className="buttonStyle" href="/introduce-portfolio/Contact/">
-              <SvgButton id="contactButton">get in touch</SvgButton>
-            </a>
-          </div>
-        </Container>
-      ) : null}
+            <Typist
+              className="typingName"
+              cursor={{
+                show: false,
+              }}
+            >
+              <Typist.Backspace count={0} delay={30000} />
+              <span className="description">- Nicholas Tey Kai Jian -</span>
+            </Typist>
+          </Container>
+        ) : null}
+
+        {currentNav === 1 ? (
+          <Container className="absoluteBottom">
+            <div className="skillTop">
+              <Grid container spacing={5} columns={16}>
+                <Grid item xs={8}>
+                  <Card>
+                    <CardActionArea onClick={() => {}} id="coding">
+                      <img
+                        src={coding}
+                        alt="Logo"
+                        class="centerImage"
+                        height="150"
+                      />
+                      <CardContent
+                        className="cardContent"
+                        style={{
+                          padding: "2vh",
+                        }}
+                      >
+                        <p style={Font.title_en}>CODING</p>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+                <Grid item xs={8}>
+                  <Card>
+                    <CardActionArea className="skills">
+                      <img
+                        src={languageLogo}
+                        alt="Logo"
+                        class="centerImage"
+                        height="150"
+                      />
+                      <CardContent
+                        className="cardContent"
+                        style={{
+                          padding: "2vh",
+                        }}
+                      >
+                        <p style={Font.title_en}>LANGUAGE</p>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+                <Grid item xs={8}>
+                  <Card>
+                    <CardActionArea className="skills">
+                      <img
+                        src={habit}
+                        alt="Logo"
+                        class="centerImage"
+                        height="150"
+                      />
+                      <CardContent
+                        className="cardContent"
+                        style={{
+                          padding: "2vh",
+                        }}
+                      >
+                        <p style={Font.title_en}>HABIT</p>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+                <Grid item xs={8}>
+                  <Card>
+                    <CardActionArea className="skills">
+                      <img
+                        src={other}
+                        alt="Logo"
+                        class="centerImage"
+                        height="150"
+                      />
+                      <CardContent
+                        className="cardContent"
+                        style={{
+                          padding: "2vh",
+                        }}
+                      >
+                        <p style={Font.title_en}>OTHER</p>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+              </Grid>
+            </div>
+          </Container>
+        ) : null}
+
+        {currentNav === 2 ? (
+          <Container className="absoluteBottom" id="contactCont">
+            <div className="contactImage animate__animated animate__bounceInRight">
+              <img src={laugh} alt="Logo" id="contactImage" height="450" />
+            </div>
+            <div className="whoAmI animate__animated animate__bounceInLeft">
+              <div id="footerContactDetail">
+                <a
+                  style={{ textDecoration: "none", color: "black" }}
+                  href="https://github.com/jian0209"
+                >
+                  <GitHub />
+                </a>
+                <a
+                  style={{ textDecoration: "none", color: "black" }}
+                  href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+                >
+                  <LinkedIn />
+                </a>
+              </div>
+            </div>
+          </Container>
+        ) : null}
+
+        {currentNav === 3 ? (
+          <Container className="absoluteBottom" id="contactCont">
+            <div className="whoAmI animate__animated animate__bounceInLeft">
+              <img
+                src={logo}
+                alt="Logo"
+                class="logo animate__animated animate__fadeInDown"
+                height="150"
+              />
+              <p style={Font.title_en}>Who Am I?</p>
+              <p id="contactDes" style={Font.normalizeFont_en}>
+                Jian is a Software Developer, junior leader and a fresh graduate
+                student, with experience interviewing, leading, and managing the
+                small team in his internship. He has a background of 7 years
+                working. The previous company is to work with design with
+                AutoCad and manage the worker at back. The internship company is
+                to work with develop the website, ios and android application
+                with react js, and react native. On the university, he learned
+                java, python, visual basic, sql, and web development.
+              </p>
+            </div>
+            <div className="contactImage animate__animated animate__bounceInRight">
+              <img src={normal} alt="Logo" id="contactImage" height="450" />
+              {/* logo */}
+              {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
+            </div>
+            <div id="contactButtonCont">
+              <a className="buttonStyle" href="/introduce-portfolio/Contact/">
+                <SvgButton id="contactButton">get in touch</SvgButton>
+              </a>
+            </div>
+          </Container>
+        ) : null}
+      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { CommonStore } from "../Store/commonStore";
-import Colors from '../Assets/Colors';
+import Colors from "../Assets/Colors";
 
 const StyledTabs = styled((props) => (
   <Tabs
@@ -41,18 +41,22 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 export default function Header_cn() {
-    const currentNav = CommonStore.useState((s) => s.navCode);
+  const currentNav = CommonStore.useState((s) => s.navCode);
 
   const handleChange = (event, newValue) => {
-    CommonStore.update(s => {
-        s.navCode = newValue;
-    })
+    CommonStore.update((s) => {
+      s.navCode = newValue;
+    });
   };
 
   return (
-    <Box sx={{ width: "100%", height: 50, }}>
+    <Box sx={{ width: "100%", height: 50 }}>
       <Box>
-        <StyledTabs value={currentNav} onChange={handleChange}>
+        <StyledTabs
+          value={currentNav}
+          onChange={handleChange}
+          variant="scrollable"
+        >
           <StyledTab label="关于" />
           <StyledTab label="技能栏" />
           <StyledTab label="作品集" />

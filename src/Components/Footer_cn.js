@@ -69,7 +69,7 @@ const Footer_cn = () => {
         </div>
         <div id="footerAbout">
             <p id="aboutText" style={Font.subtitle_en}>电子邮件: jian000209@gmail.com</p>
-                <p style={Font.subtitle_en}>电话与WhatsApp: +60 18 632 0278</p>
+                <p id="phoneText" style={Font.subtitle_en}>电话与WhatsApp: +60 18 632 0278</p>
         </div>
       </div>
     </div>

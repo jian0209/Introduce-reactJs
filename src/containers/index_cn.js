@@ -43,10 +43,10 @@ const Home_cn = () => {
     const { children, ...other } = props;
 
     return (
-      <svg width="250" height="50" {...other} ref={ref}>
-        <polygon points="0,50 0,0 250,0 250,50" className="bg" />
-        <polygon points="0,50 0,0 250,0 250,50" className="borderEffect" />
-        <foreignObject x="0" y="0" width="250" height="50">
+      <svg width="200" height="50" {...other} ref={ref}>
+        <polygon points="0,50 0,0 200,0 200,50" className="bg" />
+        <polygon points="0,50 0,0 200,0 200,50" className="borderEffect" />
+        <foreignObject x="0" y="0" width="200" height="50">
           <div className="content">{children}</div>
         </foreignObject>
       </svg>
@@ -260,7 +260,7 @@ const Home_cn = () => {
         </Container>
       ) : null}
 
-{currentNav === 1 ? (
+      {currentNav === 1 ? (
         <Container className="absoluteBottom">
           <div className="skillTop">
             <Grid container spacing={5} columns={16}>
@@ -273,9 +273,12 @@ const Home_cn = () => {
                       class="centerImage"
                       height="150"
                     />
-                    <CardContent className="cardContent" style={{
-                      padding: '2vh',
-                    }}>
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
                       <p style={Font.title_en}>编程</p>
                     </CardContent>
                   </CardActionArea>
@@ -290,9 +293,12 @@ const Home_cn = () => {
                       class="centerImage"
                       height="150"
                     />
-                    <CardContent className="cardContent" style={{
-                      padding: '2vh',
-                    }}>
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
                       <p style={Font.title_en}>语言</p>
                     </CardContent>
                   </CardActionArea>
@@ -307,9 +313,12 @@ const Home_cn = () => {
                       class="centerImage"
                       height="150"
                     />
-                    <CardContent className="cardContent" style={{
-                      padding: '2vh',
-                    }}>
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
                       <p style={Font.title_en}>爱好</p>
                     </CardContent>
                   </CardActionArea>
@@ -324,9 +333,12 @@ const Home_cn = () => {
                       class="centerImage"
                       height="150"
                     />
-                    <CardContent className="cardContent" style={{
-                      padding: '2vh',
-                    }}>
+                    <CardContent
+                      className="cardContent"
+                      style={{
+                        padding: "2vh",
+                      }}
+                    >
                       <p style={Font.title_en}>其他</p>
                     </CardContent>
                   </CardActionArea>
@@ -337,38 +349,44 @@ const Home_cn = () => {
         </Container>
       ) : null}
 
-{currentNav === 2 ? (
+      {currentNav === 2 ? (
         <Container className="absoluteBottom" id="contactCont">
           <div className="contactImage animate__animated animate__bounceInRight">
             <img src={laugh} alt="Logo" id="contactImage" height="450" />
           </div>
           <div className="whoAmI animate__animated animate__bounceInLeft">
-            
-          <div id="footerContactDetail">
-            <a
-              style={{ textDecoration: "none", color: "black" }}
-              href="https://github.com/jian0209"
-            >
-              <GitHub />
-            </a>
-            <a
-              style={{ textDecoration: "none", color: "black" }}
-              href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
-            >
-              <LinkedIn />
-            </a>
-          </div>
+            <div id="footerContactDetail">
+              <a
+                style={{ textDecoration: "none", color: "black" }}
+                href="https://github.com/jian0209"
+              >
+                <GitHub />
+              </a>
+              <a
+                style={{ textDecoration: "none", color: "black" }}
+                href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+              >
+                <LinkedIn />
+              </a>
+            </div>
           </div>
         </Container>
       ) : null}
 
-
       {currentNav === 3 ? (
         <Container className="absoluteBottom" id="contactCont">
-          <div className="whoAmI">
-            <p style={Font.title_en}>猜猜看我是谁?</p>
-            <p className="animate__animated animate__fadeInLeft" style={Font.normalizeFont_en}>
-              郑凯键是一名软体开发者，小领队， 和社会新鲜人。他拥有当面试者，带领团队和管理小团队的经验。他还拥有了7年的工作历史。郑凯键在一开始的公司担任了管理员和设计师。他在一开始的公司学习了如何管理和autocad的使用方式。在实习的公司， 他学习了团队作业，使用react开发网页， ios和Android的应用程序。他在大学也学习了java， python， visual basic， html， css， sql， cisco packet tracer。
+          <div className="whoAmI animate__animated animate__bounceInLeft">
+            <p id="" style={Font.title_en}>我是谁?</p>
+            <p
+            id="contactDes" 
+              className="animate__animated animate__fadeInLeft"
+              style={Font.normalizeFont_en}
+            >
+              郑凯键是一名软体开发者，小领队，
+              和社会新鲜人。他拥有当面试者，带领团队和管理小团队的经验。他还拥有了7年的工作历史。郑凯键在一开始的公司担任了管理员和设计师。他在一开始的公司学习了如何管理和autocad的使用方式。在实习的公司，
+              他学习了团队作业，使用react开发网页，
+              ios和Android的应用程序。他在大学也学习了java， python， visual
+              basic， html， css， sql， cisco packet tracer。
             </p>
           </div>
           <div className="contactImage animate__animated animate__bounceInRight">

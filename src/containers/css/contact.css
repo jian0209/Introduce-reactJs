@@ -28,6 +28,12 @@
 
 #buttonStyle {
   text-decoration: none;
+  width: 50px;
+  /* border: 1px solid black; */
+}
+
+#about{
+  white-space: nowrap;
 }
 
 .contactMainCont {
@@ -120,11 +126,12 @@
 
 #contactTitle {
   text-align: center;
+  padding-right: 0;
 }
 
 #aboutText{
     /* border: 1px solid black; */
-    margin-bottom: -15px;
+    margin-bottom: -20px;
 }
 
 #contactText{

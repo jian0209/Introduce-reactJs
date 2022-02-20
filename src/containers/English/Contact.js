@@ -60,7 +60,7 @@ const Contact = () => {
           </div>
         </Container>
         <Container id="contactTitle">
-          <p style={Font.title_en}>About Me</p>
+          <p id="about" style={Font.title_en}>About Me</p>
         </Container>
         <Container id="language">
           <Link

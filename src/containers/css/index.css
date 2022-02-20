@@ -53,6 +53,11 @@ body{
   margin-top: 20px;
 }
 
+#topNav{
+  /* border: 1px solid black; */
+  width: 55vw;
+}
+
 .cont1 {
   width: 100vw;
   height: 100vh;
@@ -64,6 +69,8 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  padding-left: 0;
+  flex: 1,
 }
 
 #contactCont {
@@ -141,11 +148,41 @@ body{
   .contactImage {
     display: none;
   }
+  
+  .logo{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 769px) {
   .contactImage {
     display: block;
     width: 40%;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .whoAmI{
+    padding-top: 8vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .whoAmI{
+    padding-top: 25vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .whoAmI{
+    padding-top: 0;
+  }
+  #contactDes{
+    width: 200%;
+  }
+
+  #contactButtonCont{
+    left: 50%;
+    top: 100%;
   }
 }
