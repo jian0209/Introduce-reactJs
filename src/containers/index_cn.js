@@ -184,21 +184,21 @@ const Home_cn = () => {
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="/introduce-portfolio"
+              href="/introduce-portfolio/"
             >
               英文
             </a>
           </Link>
           <Link
             component="button"
-            href="/introduce-portfolio/Home_cn"
+            href="/introduce-portfolio/Home_cn/"
             color={Colors.secondaryColor}
             underline="hover"
             onClick={() => {}}
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="/introduce-portfolio/Home_cn"
+              href="/introduce-portfolio/Home_cn/"
             >
               中文
             </a>
@@ -375,7 +375,7 @@ const Home_cn = () => {
             <img src={normal} alt="Logo" id="contactImage" height="450" />
           </div>
           <div id="contactButtonCont">
-            <a className="buttonStyle" href="/introduce-portfolio/Contact_cn">
+            <a className="buttonStyle" href="/introduce-portfolio/Contact_cn/">
               <SvgButton id="contactButton">了解更多</SvgButton>
             </a>
           </div>

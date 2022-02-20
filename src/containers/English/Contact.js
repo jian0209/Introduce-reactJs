@@ -54,7 +54,7 @@ const Contact = () => {
         <Container id="topNav">
           <div id="topBack">
             <Back />
-            <a href="/introduce-portfolio" id="buttonStyle">
+            <a href="/introduce-portfolio/" id="buttonStyle">
               <p style={Font.title_en}>Back</p>
             </a>
           </div>
@@ -80,14 +80,14 @@ const Contact = () => {
           </Link>
           <Link
             component="button"
-            href="/Contact_cn"
+            href="/Contact_cn/"
             color={Colors.secondaryColor}
             underline="hover"
             onClick={() => {}}
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="/introduce-portfolio/Contact_cn"
+              href="/introduce-portfolio/Contact_cn/"
             >
               Mandarin
             </a>
