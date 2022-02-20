@@ -26,11 +26,11 @@ function App() {
       ) : (
         <div className="App">
           <Switch>
-            <Route path="https://jian0209.github.io/introduce-portfolio/" component={Index} exact />
-            <Route path="https://jian0209.github.io/introduce-portfolio/Home_cn" component={Home_cn} />
-            <Route path="https://jian0209.github.io/introduce-portfolio/Contact" component={Contact} />
+            <Route path="jian0209.github.io/introduce-portfolio/" component={Index} exact />
+            <Route path="jian0209.github.io/introduce-portfolio/Home_cn" component={Home_cn} />
+            <Route path="jian0209.github.io/introduce-portfolio/Contact" component={Contact} />
             <Route
-              path="https://jian0209.github.io/introduce-portfolio/Contact_cn"
+              path="jian0209.github.io/introduce-portfolio/Contact_cn"
               component={Contact_cn}
             />
           </Switch>
