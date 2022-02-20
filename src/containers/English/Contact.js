@@ -54,7 +54,7 @@ const Contact = () => {
         <Container id="topNav">
           <div id="topBack">
             <Back />
-            <a href="/" id="buttonStyle">
+            <a href="/introduce-portfolio" id="buttonStyle">
               <p style={Font.title_en}>Back</p>
             </a>
           </div>
@@ -87,7 +87,7 @@ const Contact = () => {
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="Contact_cn"
+              href="/introduce-portfolio/Contact_cn"
             >
               Mandarin
             </a>

@@ -235,14 +235,14 @@ const Index = () => {
           </Link>
           <Link
             component="button"
-            href="/Home_cn"
+            href="/introduce-portfolio/Home_cn"
             color={Colors.secondaryColor}
             underline="hover"
             onClick={() => {}}
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="Home_cn"
+              href="/introduce-portfolio/Home_cn"
             >
               Mandarin
             </a>
@@ -452,7 +452,7 @@ const Index = () => {
             {/* <img src={logo} alt="Logo" id="contactLogo" class="animate__animated animate__fadeInDown" height="150" /> */}
           </div>
           <div id="contactButtonCont">
-            <a className="buttonStyle" href="Contact">
+            <a className="buttonStyle" href="introduce-portfolio/Contact">
               <SvgButton id="contactButton">get in touch</SvgButton>
             </a>
           </div>

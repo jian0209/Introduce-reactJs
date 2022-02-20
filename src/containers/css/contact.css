@@ -58,7 +58,7 @@
   width: 50%;
   overflow-y: auto;
   max-height: 180px;
-  z-index: -5;
+  /* z-index: -5; */
 }
 
 .timelineTitle {
@@ -95,6 +95,10 @@
   /* border: 1px black solid; */
   overflow-x: auto !important;
   overflow-y: hidden !important;
+}
+
+.TimelineEvent-container-4{
+  z-index: 5 !important;
 }
 
 #profileImage{

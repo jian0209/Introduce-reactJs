@@ -54,7 +54,7 @@ const Contact = () => {
         <Container id="topNav">
           <div id="topBack">
             <Back />
-            <a href="Home_cn" id="buttonStyle">
+            <a href="/introduce-portfolio/Home_cn" id="buttonStyle">
               <p style={Font.title_cn}>返回</p>
             </a>
           </div>
@@ -73,7 +73,7 @@ const Contact = () => {
           >
             <a
               style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="Contact"
+              href="/introduce-portfolio/Contact"
             >
               英文
             </a>
