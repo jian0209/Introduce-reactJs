@@ -134,6 +134,8 @@ body{
 .buttonStyle {
   text-decoration: none;
   color: #976b5e;
+  border: none;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 769px) {

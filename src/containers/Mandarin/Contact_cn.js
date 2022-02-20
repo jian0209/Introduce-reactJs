@@ -17,6 +17,7 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoSchoolOutline } from "react-icons/io5";
 import Footer_cn from "../../Components/Footer_cn";
+import {CommonStore} from "../../Store/commonStore";
 
 const Contact = () => {
   // useState
@@ -45,54 +46,45 @@ const Contact = () => {
           backgroundColor: Colors.lightPrimaryColor,
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
           alignItems: "center",
           zIndex: 1000,
           // paddingHorizontal: '5vw',
         }}
       >
-        <Container id="topNav">
           <div id="topBack">
             <Back />
-            <a href="/introduce-portfolio/Home_cn/" id="buttonStyle">
+            <a href="/introduce-portfolio/" id="buttonStyle">
               <p style={Font.title_cn}>返回</p>
             </a>
           </div>
-        </Container>
         <Container id="contactTitle">
           <p style={Font.title_cn}>关于</p>
         </Container>
-        <Container id="language">
+        {/* <Container id="language">
           <Link
             component="button"
-            href=""
             color={Colors.secondaryColor}
             underline="hover"
             style={{ marginRight: 15 }}
-            onClick={() => {}}
+            onClick={() => {
+              CommonStore.update(s => {
+                s.isEnglishContact = true;
+                s.isMandarinContact = false;
+              })
+            }}
           >
-            <a
-              style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href="/introduce-portfolio/Contact/"
-            >
               英文
-            </a>
           </Link>
           <Link
             component="button"
-            href="/Contact_cn"
             color={Colors.secondaryColor}
             underline="hover"
             onClick={() => {}}
           >
-            <a
-              style={{ textDecoration: "none", color: Colors.darkGoldColor }}
-              href=""
-            >
               中文
-            </a>
           </Link>
-        </Container>
+        </Container> */}
       </div>
       {/* absolute bottom container */}
       <Container className="contactAbsoluteBottom">

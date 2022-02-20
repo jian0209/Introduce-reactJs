@@ -30,12 +30,12 @@ const Font = {
   title_cn: {
     fontSize: 20,
     fontWeight: "bold",
-    color: Colors.primaryColor,
+    color: Colors.secondaryColor,
   },
   subtitle_cn: {
     fontSize: 12,
     fontWeight: "regular",
-    color: Colors.lightPrimaryColor,
+    color: Colors.lightSecondaryColor,
   },
   normalizeFont_cn: {
     fontSize: 10,
