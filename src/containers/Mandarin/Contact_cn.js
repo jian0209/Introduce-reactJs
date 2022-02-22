@@ -17,7 +17,7 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoSchoolOutline } from "react-icons/io5";
 import Footer_cn from "../../Components/Footer_cn";
-import {CommonStore} from "../../Store/commonStore";
+import { CommonStore } from "../../Store/commonStore";
 
 const Contact = () => {
   // useState
@@ -52,12 +52,10 @@ const Contact = () => {
           // paddingHorizontal: '5vw',
         }}
       >
-          <div id="topBack">
-            <Back />
-            <a href="/introduce-portfolio/" id="buttonStyle">
-              <p style={Font.title_cn}>返回</p>
-            </a>
-          </div>
+        <a href="/introduce-portfolio/" className="topBack" id="buttonStyle">
+          <Back />
+          <p style={Font.title_cn}>返回</p>
+        </a>
         <Container id="contactTitle">
           <p style={Font.title_cn}>关于</p>
         </Container>
@@ -91,7 +89,12 @@ const Contact = () => {
         {/* describe */}
         <div className="contactMainCont">
           <div id="imgHere">
-          <img src={smile} alt="profile" class="animate__animated animate__fadeInDown" height="390" />
+            <img
+              src={smile}
+              alt="profile"
+              class="animate__animated animate__fadeInDown"
+              height="390"
+            />
           </div>
           <div id="contactIntroduction">
             <p style={Font.normalizeFont_en}>
@@ -423,7 +426,7 @@ const Contact = () => {
               Enrolled Python Course (Self-Learning)
             </p>
             <p style={Font.normalizeFont_en}>
-            这是我自己报名参加的第一个课外课程，因为我想提高自己的技能，锻炼自己的逻辑思维。
+              这是我自己报名参加的第一个课外课程，因为我想提高自己的技能，锻炼自己的逻辑思维。
             </p>
           </div>
         ) : null}
@@ -433,7 +436,7 @@ const Contact = () => {
               Python Competition - "PYPRO" (Event)
             </p>
             <p style={Font.normalizeFont_en}>
-            这是我第一次参加校内编码比赛，当然，我没有在赛场上取得名次。尽管我已经尽力了，但我还是觉得很高兴，因为我获得了很多经验，并了解了比赛的紧张气氛。
+              这是我第一次参加校内编码比赛，当然，我没有在赛场上取得名次。尽管我已经尽力了，但我还是觉得很高兴，因为我获得了很多经验，并了解了比赛的紧张气氛。
             </p>
           </div>
         ) : null}
@@ -443,8 +446,8 @@ const Contact = () => {
               Perksense Sdn Bhd (Part Time)
             </p>
             <p style={Font.normalizeFont_en}>
-            我偶然发现这家公司，并成为了我的兼职，所以我开始了半工半读的生活。因为这家公司同意让我在家工作，所以我担任了一个开发人员的职位，这帮助我了解社会编程和学校之间的区别。同时在这方面给了我很多经验。 - React Native |
-              React JS
+              我偶然发现这家公司，并成为了我的兼职，所以我开始了半工半读的生活。因为这家公司同意让我在家工作，所以我担任了一个开发人员的职位，这帮助我了解社会编程和学校之间的区别。同时在这方面给了我很多经验。
+              - React Native | React JS
             </p>
           </div>
         ) : null}
@@ -454,7 +457,7 @@ const Contact = () => {
               Perksense Sdn Bhd (Internship)
             </p>
             <p style={Font.normalizeFont_en}>
-            这也是我的实习公司 - React Native | React JS
+              这也是我的实习公司 - React Native | React JS
             </p>
           </div>
         ) : null}
@@ -464,8 +467,8 @@ const Contact = () => {
               Perksense Sdn Bhd (Full Time)
             </p>
             <p style={Font.normalizeFont_en}>
-            当我正式转为全职人员时，我的职位也一并升级了。在这家公司，我也学会了如何面试别人。 - React
-              Native | React JS
+              当我正式转为全职人员时，我的职位也一并升级了。在这家公司，我也学会了如何面试别人。
+              - React Native | React JS
             </p>
           </div>
         ) : null}

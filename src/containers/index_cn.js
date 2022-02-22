@@ -32,6 +32,10 @@ import { ReactComponent as GitHub } from "../Assets/svg/githubBig.svg";
 import Contact from "./Mandarin/Contact_cn";
 
 const Home_cn = () => {
+  // var
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
   // useState
   const [isContact, setIsContact] = useState(false);
 
@@ -270,7 +274,7 @@ const Home_cn = () => {
           {currentNav === 1 ? (
             <Container className="absoluteBottom">
               <div className="skillTop">
-                <Grid container spacing={5} columns={16}>
+                <Grid container spacing={5} columns={windowWidth < 426 ? 8 : 16}>
                   <Grid item xs={8}>
                     <Card>
                       <CardActionArea id="coding">

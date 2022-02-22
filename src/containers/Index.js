@@ -31,17 +31,30 @@ import { styled } from "@mui/system";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import { ReactComponent as LinkedIn } from "../Assets/svg/linkedInBig.svg";
 import { ReactComponent as GitHub } from "../Assets/svg/githubBig.svg";
 import Contact from "./English/Contact";
 import Contact_cn from "./Mandarin/Contact_cn";
 import Index_cn from "./index_cn";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import SkillBar from "react-skillbars";
 
 const Index = () => {
+  // var
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
   // useState
   const [language, setLanguage] = useState([]);
+
+  const [showHardSkills, setShowHardSkills] = useState(false);
+  const [showLanguage, setShowLanguage] = useState(false);
+  const [showSoftSkills, setShowSoftSkills] = useState(false);
+  const [showOthers, setShowOthers] = useState(false);
 
   const currentNav = CommonStore.useState((s) => s.navCode);
   const isEnglishContact = CommonStore.useState((s) => s.isEnglishContact);
@@ -206,8 +219,204 @@ const Index = () => {
     return <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />;
   });
 
+  const modalStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: windowWidth * 0.6,
+    maxHeight: windowHeight * 0.8,
+    overflow: 'auto',
+    border: "1px solid",
+    borderColor: Colors.lightSecondaryColor,
+    backgroundColor: Colors.lightPrimaryColor,
+    boxShadow: 24,
+    p: 4,
+    borderRadius: 10,
+  };
+
+  const hardSkills = [
+    {type: "React Native", level: 85},
+    {type: "React JS", level: 80},
+    {type: "Java", level: 73},
+    {type: "HTML CSS", level: 71},
+    {type: "Visual Basic", level: 70},
+    {type: "SQL", level: 65},
+    {type: "PHP", level: 60},
+    {type: "TypeScript", level: 58},
+    {type: "Python", level: 57},
+  ];
+
+  const languageSkills = [
+    {type: "Mandarin", level: 90},
+    {type: "English", level: 70},
+    {type: "Malay", level: 30},
+  ];
+
+  const softSkills = [
+    {type: "Responsibility", level: 96},
+    {type: "Cooperation", level: 95},
+    {type: "Learning", level: 90},
+    {type: "Problem Solving", level: 85},
+    {type: "Adaptability", level: 80},
+    {type: "Organization", level: 75},
+    {type: "Communication", level: 68},
+  ];
+
+  const otherSkills = [
+    {type: "AutoCad LT", level: 90},
+    {type: "PowerPoint", level: 90},
+    {type: "Visio", level: 87},
+    {type: "Git", level: 80},
+    {type: "Word", level: 75},
+    {type: "Access", level: 73},
+    {type: "Excel", level: 55},
+  ];
+
+  const skillsColors = {
+    "bar": {
+      "hue": 200,
+      "saturation": 34,
+      "level": {
+        "minimum": 30,
+        "maximum": 65
+      }
+    },
+    "title": {
+      "text": {
+        "hue": 14,
+        "saturation": {
+          "minimum": 23,
+          "maximum": 2
+        },
+        "level": 48
+      },
+      "background": {
+        "hue": 32,
+        "saturation": {
+          "minimum": 38,
+          "maximum": 78
+        },
+        "level": {
+          "minimum": 95,
+          "maximum": 100
+        }
+      }
+    }
+  }
+
   return (
     <div>
+      {/* modal start */}
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showHardSkills}
+        onClose={() => {
+          setShowHardSkills(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showHardSkills}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              Hard Skills Set
+            </p>
+            <SkillBar colors={skillsColors} skills={hardSkills}/>
+          </Box>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showLanguage}
+        onClose={() => {
+          setShowLanguage(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showLanguage}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              Language Skills Set
+            </p>
+            <SkillBar colors={skillsColors} skills={languageSkills}/>
+          </Box>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showSoftSkills}
+        onClose={() => {
+          setShowSoftSkills(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showSoftSkills}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              Soft Skills Set
+            </p>
+            <SkillBar colors={skillsColors} skills={softSkills}/>
+          </Box>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showOthers}
+        onClose={() => {
+          setShowOthers(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showOthers}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              Software Skills Set
+            </p>
+            <SkillBar colors={skillsColors} skills={otherSkills}/>
+          </Box>
+        </Fade>
+      </Modal>
+      {/* modal end */}
       {isEnglish ? (
         <div className="cont1">
           {/* absolute top container */}
@@ -234,7 +443,7 @@ const Index = () => {
                 style={{ marginRight: 15 }}
                 onClick={() => {}}
               >
-                  English
+                English
               </Link>
               <Link
                 component="button"
@@ -244,10 +453,10 @@ const Index = () => {
                   CommonStore.update((s) => {
                     s.isMandarin = true;
                     s.isEnglish = false;
-                  })
+                  });
                 }}
               >
-                  Mandarin
+                Mandarin
               </Link>
             </Container>
           </div>
@@ -316,10 +525,19 @@ const Index = () => {
           {currentNav === 1 ? (
             <Container className="absoluteBottom">
               <div className="skillTop">
-                <Grid container spacing={5} columns={16}>
+                <Grid
+                  container
+                  spacing={5}
+                  columns={windowWidth < 426 ? 8 : 16}
+                >
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea onClick={() => {}} id="coding">
+                      <CardActionArea
+                        onClick={() => {
+                          setShowHardSkills(true);
+                        }}
+                        id="coding"
+                      >
                         <img
                           src={coding}
                           alt="Logo"
@@ -332,14 +550,16 @@ const Index = () => {
                             padding: "2vh",
                           }}
                         >
-                          <p style={Font.title_en}>CODING</p>
+                          <p style={Font.title_en}>HARD SKILLS</p>
                         </CardContent>
                       </CardActionArea>
                     </Card>
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea className="skills">
+                      <CardActionArea onClick={() => {
+                          setShowLanguage(true);
+                        }} className="skills">
                         <img
                           src={languageLogo}
                           alt="Logo"
@@ -352,14 +572,16 @@ const Index = () => {
                             padding: "2vh",
                           }}
                         >
-                          <p style={Font.title_en}>LANGUAGE</p>
+                          <p style={Font.title_en}>LANGUAGES</p>
                         </CardContent>
                       </CardActionArea>
                     </Card>
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea className="skills">
+                      <CardActionArea onClick={() => {
+                          setShowSoftSkills(true);
+                        }} id="soft">
                         <img
                           src={habit}
                           alt="Logo"
@@ -372,14 +594,16 @@ const Index = () => {
                             padding: "2vh",
                           }}
                         >
-                          <p style={Font.title_en}>HABIT</p>
+                          <p style={Font.title_en}>SOFT SKILLS</p>
                         </CardContent>
                       </CardActionArea>
                     </Card>
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea className="skills">
+                      <CardActionArea onClick={() => {
+                          setShowOthers(true);
+                        }} className="skills">
                         <img
                           src={other}
                           alt="Logo"
@@ -392,7 +616,7 @@ const Index = () => {
                             padding: "2vh",
                           }}
                         >
-                          <p style={Font.title_en}>OTHER</p>
+                          <p style={Font.title_en}>OTHERS</p>
                         </CardContent>
                       </CardActionArea>
                     </Card>
@@ -460,7 +684,7 @@ const Index = () => {
                     CommonStore.update((s) => {
                       s.isEnglishContact = true;
                       s.isEnglish = false;
-                    })
+                    });
                   }}
                 >
                   <SvgButton id="contactButton">get in touch</SvgButton>

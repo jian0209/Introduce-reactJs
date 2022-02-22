@@ -1,10 +1,6 @@
-/*  */
-body p {
-  font-family: IBM Plex Sans, sans-serif;
-}
-
 body{
   margin: 0 !important;
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .absoluteTop {
@@ -35,6 +31,7 @@ body{
   text-align: center;
   margin-top: 20vh;
   margin-bottom: 40px;
+  height: 13em;
 }
 
 .typingName {
@@ -84,8 +81,24 @@ body{
   margin: 0;
 }
 
+.skillbar-title span {
+  padding: 0 10px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px !important;
+}
+
+.skillbar-title {
+  width: 120px !important;
+}
+
 .skills{
   background-color: #655767;
+}
+
+#soft{
+  background-color: #077f8f;
 }
 
 #footerContactDetail {
@@ -131,6 +144,10 @@ body{
   padding: 10px;
 }
 
+.mainLearned{
+  border: 1px solid black;
+}
+
 .buttonStyle {
   text-decoration: none;
   color: #976b5e;
@@ -161,6 +178,25 @@ body{
     display: block;
     width: 40%;
   }
+
+  .animationTypingMain {
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 40px;
+    height: 13em;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+
+  .animationTypingMain {
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 40px;
+    height: 15em;
+  }
 }
 
 @media screen and (max-width: 578px) {
@@ -186,5 +222,13 @@ body{
   #contactButtonCont{
     left: 50%;
     top: 100%;
+  }
+
+  .animationTypingMain {
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 40px;
+    height: 23em;
   }
 }

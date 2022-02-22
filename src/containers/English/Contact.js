@@ -17,7 +17,7 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoSchoolOutline } from "react-icons/io5";
 import Footer from "../../Components/Footer";
-import {CommonStore} from "../../Store/commonStore";
+import { CommonStore } from "../../Store/commonStore";
 
 const Contact = () => {
   // useState
@@ -52,14 +52,14 @@ const Contact = () => {
           // paddingHorizontal: '5vw',
         }}
       >
-          <div id="topBack">
-            <Back />
-            <a href="/introduce-portfolio/" id="buttonStyle">
-              <p style={Font.title_en}>Back</p>
-            </a>
-          </div>
+        <a href="/introduce-portfolio/" className="topBack" id="buttonStyle">
+          <Back />
+          <p style={Font.title_en}>Back</p>
+        </a>
         <Container id="contactTitle">
-          <p id="about" style={Font.title_en}>About Me</p>
+          <p id="about" style={Font.title_en}>
+            About Me
+          </p>
         </Container>
         {/* <Container id="language">
           <Link
@@ -91,7 +91,12 @@ const Contact = () => {
         {/* describe */}
         <div className="contactMainCont">
           <div id="imgHere">
-          <img src={smile} alt="profile" class="animate__animated animate__fadeInDown" id="profileImage" />
+            <img
+              src={smile}
+              alt="profile"
+              class="animate__animated animate__fadeInDown"
+              id="profileImage"
+            />
           </div>
           <div id="contactIntroduction">
             <p style={Font.normalizeFont_en}>
@@ -115,11 +120,6 @@ const Contact = () => {
         </div>
         {/* Future plan */}
         <div className="contactMiddleCont">
-          <div id="futurePlan">
-            <p id="futurePlanText" style={Font.title_en}>
-              Future Plan
-            </p>
-          </div>
           <div id="explainFuturePlan">
             <TreeView
               aria-label="file system navigator"
@@ -149,6 +149,11 @@ const Contact = () => {
                 label="To become full stack developer"
               ></TreeItem>
             </TreeView>
+          </div>
+          <div id="futurePlan">
+            <p id="futurePlanText" style={Font.title_en}>
+              Future Plan
+            </p>
           </div>
         </div>
         {/* timeline */}
@@ -497,8 +502,9 @@ const Contact = () => {
               Perksense Sdn Bhd (Full Time)
             </p>
             <p style={Font.normalizeFont_en}>
-            When I officially moved to full-time status, I was upgraded along with my position. At this company, I also learned how to interview people. - React
-              Native | React JS
+              When I officially moved to full-time status, I was upgraded along
+              with my position. At this company, I also learned how to interview
+              people. - React Native | React JS
             </p>
           </div>
         ) : null}
