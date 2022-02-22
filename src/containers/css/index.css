@@ -89,6 +89,10 @@ body{
   font-size: 13px !important;
 }
 
+.jss4{
+  z-index: 100 !important;
+}
+
 .skillbar-title {
   width: 120px !important;
 }
