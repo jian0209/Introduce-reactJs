@@ -216,10 +216,6 @@ body{
   align-items: center;
 }
 
-:root {
-  --animate-delay: 0.5s;
-}
-
 .bottomInnerCont{
   /* border: 1px solid black; */
   height: 50%;
