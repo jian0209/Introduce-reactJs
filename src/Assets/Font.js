@@ -28,17 +28,17 @@ const Font = {
     textAlign: 'justify',
   },
   title_cn: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: "bold",
     color: Colors.secondaryColor,
   },
   subtitle_cn: {
-    fontSize: 12,
+    fontSize: 20,
     fontWeight: "regular",
     color: Colors.lightSecondaryColor,
   },
   normalizeFont_cn: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "regular",
     color: Colors.greyColor,
   },

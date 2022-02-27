@@ -7,6 +7,11 @@ import Font from "../Assets/Font";
 import "./css/index.css";
 import "animate.css";
 import logo from "../Assets/image/self_icon.png";
+import java_assignment from "../Assets/image/java_project_image.png";
+import class_assignment from "../Assets/image/class_asign_image.png";
+import fyp_assignment from "../Assets/image/fyp_assignment.png";
+import visualbasic_assignment from "../Assets/image/visualbasic_assignment.png";
+import self_project from "../Assets/image/self_project.png";
 import coding from "../Assets/image/coding.png";
 import habit from "../Assets/image/habit.png";
 import laugh from "../Assets/image/laugh.jpg";
@@ -30,6 +35,11 @@ import { CardActionArea } from "@mui/material";
 import { ReactComponent as LinkedIn } from "../Assets/svg/linkedInBig.svg";
 import { ReactComponent as GitHub } from "../Assets/svg/githubBig.svg";
 import Contact from "./Mandarin/Contact_cn";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import SkillBar from "react-skillbars";
 
 const Home_cn = () => {
   // var
@@ -38,6 +48,13 @@ const Home_cn = () => {
 
   // useState
   const [isContact, setIsContact] = useState(false);
+
+  const [language, setLanguage] = useState([]);
+
+  const [showHardSkills, setShowHardSkills] = useState(false);
+  const [showLanguage, setShowLanguage] = useState(false);
+  const [showSoftSkills, setShowSoftSkills] = useState(false);
+  const [showOthers, setShowOthers] = useState(false);
 
   const currentNav = CommonStore.useState((s) => s.navCode);
   const isEnglishContact = CommonStore.useState((s) => s.isEnglishContact);
@@ -166,8 +183,204 @@ const Home_cn = () => {
     return <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />;
   });
 
+  const modalStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: windowWidth * 0.6,
+    maxHeight: windowHeight * 0.8,
+    overflow: "auto",
+    border: "1px solid",
+    borderColor: Colors.lightSecondaryColor,
+    backgroundColor: Colors.lightPrimaryColor,
+    boxShadow: 24,
+    p: 4,
+    borderRadius: 10,
+  };
+
+  const hardSkills = [
+    { type: "React Native", level: 85 },
+    { type: "React JS", level: 80 },
+    { type: "Java", level: 73 },
+    { type: "HTML CSS", level: 71 },
+    { type: "Visual Basic", level: 70 },
+    { type: "SQL", level: 65 },
+    { type: "PHP", level: 60 },
+    { type: "TypeScript", level: 58 },
+    { type: "Python", level: 57 },
+  ];
+
+  const languageSkills = [
+    { type: "中文", level: 90 },
+    { type: "英文", level: 70 },
+    { type: "马来西亚文", level: 30 },
+  ];
+
+  const softSkills = [
+    { type: "责任感", level: 96 },
+    { type: "团队合作", level: 95 },
+    { type: "自我学习", level: 90 },
+    { type: "问题解决", level: 85 },
+    { type: "适应性", level: 80 },
+    { type: "管理", level: 75 },
+    { type: "团队沟通", level: 72 },
+  ];
+
+  const otherSkills = [
+    { type: "AutoCad LT", level: 90 },
+    { type: "PowerPoint", level: 90 },
+    { type: "Visio", level: 87 },
+    { type: "Git", level: 80 },
+    { type: "Word", level: 75 },
+    { type: "Access", level: 73 },
+    { type: "Excel", level: 55 },
+  ];
+
+  const skillsColors = {
+    bar: {
+      hue: 200,
+      saturation: 34,
+      level: {
+        minimum: 30,
+        maximum: 65,
+      },
+    },
+    title: {
+      text: {
+        hue: 14,
+        saturation: {
+          minimum: 23,
+          maximum: 2,
+        },
+        level: 48,
+      },
+      background: {
+        hue: 32,
+        saturation: {
+          minimum: 38,
+          maximum: 78,
+        },
+        level: {
+          minimum: 95,
+          maximum: 100,
+        },
+      },
+    },
+  };
+
   return (
     <div>
+      {/* modal start */}
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showHardSkills}
+        onClose={() => {
+          setShowHardSkills(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showHardSkills}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              编程技能
+            </p>
+            <SkillBar colors={skillsColors} skills={hardSkills} />
+          </Box>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showLanguage}
+        onClose={() => {
+          setShowLanguage(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showLanguage}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              语言技能
+            </p>
+            <SkillBar colors={skillsColors} skills={languageSkills} />
+          </Box>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showSoftSkills}
+        onClose={() => {
+          setShowSoftSkills(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showSoftSkills}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              团队技能
+            </p>
+            <SkillBar colors={skillsColors} skills={softSkills} />
+          </Box>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={showOthers}
+        onClose={() => {
+          setShowOthers(false);
+        }}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={showOthers}>
+          <Box sx={modalStyle}>
+            <p
+              style={Font.title_en}
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
+              软件概要
+            </p>
+            <SkillBar colors={skillsColors} skills={otherSkills} />
+          </Box>
+        </Fade>
+      </Modal>
+      {/* modal end */}
       {isContact ? (
         <Contact />
       ) : (
@@ -196,13 +409,13 @@ const Home_cn = () => {
                 underline="hover"
                 style={{ marginRight: 15 }}
                 onClick={() => {
-                  CommonStore.update(s => {
+                  CommonStore.update((s) => {
                     s.isEnglish = true;
                     s.isMandarin = false;
-                  })
+                  });
                 }}
               >
-                  英文
+                英文
               </Link>
               <Link
                 component="button"
@@ -211,7 +424,7 @@ const Home_cn = () => {
                 underline="hover"
                 onClick={() => {}}
               >
-                  中文
+                中文
               </Link>
             </Container>
           </div>
@@ -274,10 +487,19 @@ const Home_cn = () => {
           {currentNav === 1 ? (
             <Container className="absoluteBottom">
               <div className="skillTop">
-                <Grid container spacing={5} columns={windowWidth < 426 ? 8 : 16}>
+                <Grid
+                  container
+                  spacing={5}
+                  columns={windowWidth < 426 ? 8 : 16}
+                >
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea id="coding">
+                      <CardActionArea
+                        id="coding"
+                        onClick={() => {
+                          setShowHardSkills(true);
+                        }}
+                      >
                         <img
                           src={coding}
                           alt="Logo"
@@ -297,7 +519,12 @@ const Home_cn = () => {
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea id="skillLanguage">
+                      <CardActionArea
+                        onClick={() => {
+                          setShowLanguage(true);
+                        }}
+                        id="skillLanguage"
+                      >
                         <img
                           src={languageLogo}
                           alt="Logo"
@@ -317,7 +544,12 @@ const Home_cn = () => {
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea id="skillHabit">
+                      <CardActionArea
+                        onClick={() => {
+                          setShowSoftSkills(true);
+                        }}
+                        id="soft"
+                      >
                         <img
                           src={habit}
                           alt="Logo"
@@ -330,14 +562,19 @@ const Home_cn = () => {
                             padding: "2vh",
                           }}
                         >
-                          <p style={Font.title_en}>爱好</p>
+                          <p style={Font.title_en}>团队</p>
                         </CardContent>
                       </CardActionArea>
                     </Card>
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea id="skillLanguage">
+                      <CardActionArea
+                        onClick={() => {
+                          setShowOthers(true);
+                        }}
+                        id="skillLanguage"
+                      >
                         <img
                           src={other}
                           alt="Logo"
@@ -361,26 +598,182 @@ const Home_cn = () => {
           ) : null}
 
           {currentNav === 2 ? (
-            <Container className="absoluteBottom" id="contactCont">
-              <div className="contactImage animate__animated animate__bounceInRight">
-                <img src={laugh} alt="Logo" id="contactImage" height="450" />
-              </div>
-              <div className="whoAmI animate__animated animate__bounceInLeft">
-                <div id="footerContactDetail">
-                  <a
-                    style={{ textDecoration: "none", color: "black" }}
-                    href="https://github.com/jian0209"
-                  >
-                    <GitHub />
-                  </a>
-                  <a
-                    style={{ textDecoration: "none", color: "black" }}
-                    href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
-                  >
-                    <LinkedIn />
-                  </a>
-                </div>
-              </div>
+            <Container className="absoluteBottom" id="portfolioInnerCont">
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                spacing={5}
+                columns={windowWidth < 550 ? 4 : 12}
+              >
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInTopLeft">
+                    <div className="topInnerCont">
+                      <img
+                        src={class_assignment}
+                        alt="class_assignment"
+                        class="imgInnerCont"
+                      />
+                    </div>
+                    <div className="bottomInnerCont">
+                      <p style={Font.normalizeFont_cn}>种类: 迷你外部项目</p>
+                      <p style={Font.normalizeFont_cn}>名字: 老师编排课程</p>
+                      <p style={Font.normalizeFont_cn}>编程语言: -</p>
+                      <p style={Font.normalizeFont_cn}>软件: MS Excel</p>
+                      <p style={Font.normalizeFont_cn}>功能: 分配教室给教师.</p>
+                      <p style={Font.normalizeFont_cn}>
+                        介绍:
+                        这是我第一个非常简单的外部项目，是受位于柔佛州麻坡的中华中学的一位老师委托进行的.
+                      </p>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInDown ">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={fyp_assignment}
+                          alt="fyp_assignment"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_cn}>
+                          种类: Final Year Project
+                        </p>
+                        <p style={Font.normalizeFont_cn}>名字: 餐厅管理系统</p>
+                        <p style={Font.normalizeFont_cn}>
+                          编程语言: Visual Basic
+                        </p>
+                        <p style={Font.normalizeFont_cn}>软件: Visual Studio</p>
+                        <p style={Font.normalizeFont_cn}>
+                          软件需求: SAP Crystal Report(runtime version)
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          功能:
+                          订单付款，客户会员，报告（每周销售，每月销售，剩余库存）
+                          管理员工，管理供应商.
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          登陆账号: staff ID - 100001, password - test
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          登陆账号: admin ID - 100000, password - test
+                        </p>
+                        <p style={Font.normalizeFont_cn}>所用数据库 - SQL</p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInTopRight">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={visualbasic_assignment}
+                          alt="visualbasic_assignment"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_cn}>种类: 个人项目</p>
+                        <p style={Font.normalizeFont_cn}>名字: 学生实习系统</p>
+                        <p style={Font.normalizeFont_cn}>
+                          编程语言: Visual Basic
+                        </p>
+                        <p style={Font.normalizeFont_cn}>软件: Visual Studio</p>
+                        <p style={Font.normalizeFont_cn}>
+                          软件需求: SAP Crystal Report(runtime version)
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          功能: 注册账户作为文凭或学位 学生, 编辑账户, 创建简历,
+                          创建日志，编辑和删除日志.
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          介绍: 在学生实习期间创建日志和简历.
+                        </p>
+                        <p style={Font.normalizeFont_cn}>所用数据库 - SQL</p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInBottomLeft">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={self_project}
+                          alt="self_project"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont ">
+                        <p style={Font.normalizeFont_cn}>种类: 介绍自己</p>
+                        <p style={Font.normalizeFont_cn}>编程语言: React JS</p>
+                        <p style={Font.normalizeFont_cn}>软件: VS Code</p>
+                        <p style={Font.normalizeFont_cn}>介绍: 让您更了解我.</p>
+                        <p style={Font.normalizeFont_cn}>
+                          所用数据库 - json server (API)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInUp">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={java_assignment}
+                          alt="java_assignment"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_cn}>种类: 个人项目</p>
+                        <p style={Font.normalizeFont_cn}>名字: 银行系统</p>
+                        <p style={Font.normalizeFont_cn}>编程语言: Java</p>
+                        <p style={Font.normalizeFont_cn}>软件: Netbean</p>
+                        <p style={Font.normalizeFont_cn}>
+                          功能:
+                          以管理员身份登录，注册客户账户，编辑客户信息，取款，存款，交易记录，转移现金，以及迷你小游戏.
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          登陆账号: username - jin, password - asd
+                        </p>
+                        <p style={Font.normalizeFont_cn}>
+                          所用数据库 - Textpad
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInBottomRight">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <a
+                          style={{ textDecoration: "none", color: "black" }}
+                          href="https://github.com/jian0209"
+                          target="_blank"
+                        >
+                          <GitHub class="imgInnerCont" />
+                        </a>
+                      </div>
+                      <div className="topInnerCont">
+                        <a
+                          style={{ textDecoration: "none", color: "black" }}
+                          href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+                          target="_blank"
+                        >
+                          <LinkedIn class="imgInnerCont" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+              </Grid>
             </Container>
           ) : null}
 
@@ -393,7 +786,7 @@ const Home_cn = () => {
                 <p
                   id="contactDes"
                   className="animate__animated animate__fadeInLeft"
-                  style={Font.normalizeFont_en}
+                  style={Font.normalizeFont_cn}
                 >
                   郑凯键是一名软体开发者，小领队，
                   和社会新鲜人。他拥有当面试者，带领团队和管理小团队的经验。他还拥有了7年的工作历史。郑凯键在一开始的公司担任了管理员和设计师。他在一开始的公司学习了如何管理和autocad的使用方式。在实习的公司，

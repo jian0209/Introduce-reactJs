@@ -120,6 +120,11 @@ const Contact = () => {
         </div>
         {/* Future plan */}
         <div className="contactMiddleCont">
+          <div id="futurePlan">
+            <p id="futurePlanText" style={Font.title_en}>
+              Future Plan
+            </p>
+          </div>
           <div id="explainFuturePlan">
             <TreeView
               aria-label="file system navigator"
@@ -149,11 +154,6 @@ const Contact = () => {
                 label="To become full stack developer"
               ></TreeItem>
             </TreeView>
-          </div>
-          <div id="futurePlan">
-            <p id="futurePlanText" style={Font.title_en}>
-              Future Plan
-            </p>
           </div>
         </div>
         {/* timeline */}

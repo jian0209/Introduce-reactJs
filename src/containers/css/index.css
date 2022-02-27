@@ -48,6 +48,7 @@ body{
   font-size: 26px;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #topNav{
@@ -157,6 +158,80 @@ body{
   color: #976b5e;
   border: none;
   background-color: transparent;
+}
+
+.portfolioInnerCont{
+  /* border: 1px solid black; */
+  height: 37vh;
+  
+}
+
+.imgInnerCont {
+  height: 100%;
+  max-width: 100%;
+}
+
+.imgInnerCont:hover {
+  color: #424242;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 1;
+  transform: scale(2);
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dad3dd; 
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E0CEBA; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #697069; 
+}
+
+.topInnerCont{
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --animate-delay: 0.5s;
+}
+
+.bottomInnerCont{
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+#portfolioInnerCont{
+  overflow: auto;
+  padding-top: 6em;
+  padding-bottom: 20px;
+  overflow: visible;
 }
 
 @media screen and (max-width: 769px) {

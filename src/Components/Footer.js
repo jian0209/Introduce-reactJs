@@ -33,43 +33,54 @@ const Footer = () => {
     <div className="footerMainCont">
       <div id="footerCont">
         <div id="footerContact">
-          <p id="contactText" style={Font.title_en}>Contact Me</p>
+          <p id="contactText" style={Font.title_en}>
+            Contact Me
+          </p>
           <div id="footerContactDetail">
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://www.facebook.com/kaijian.tey"
+              target="_blank"
             >
               <Facebook />
             </a>
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://www.instagram.com/kjtey/"
+              target="_blank"
             >
               <Instagram />
             </a>
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="mailto:jian000209@gmail.com?subject=I am intersting with you"
+              target="_blank"
             >
               <Gmail />
             </a>
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://github.com/jian0209"
+              target="_blank"
             >
               <GitHub />
             </a>
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+              target="_blank"
             >
               <LinkedIn />
             </a>
           </div>
         </div>
         <div id="footerAbout">
-            <p id="aboutText" style={Font.subtitle_en}>Email: jian000209@gmail.com</p>
-                <p id="phoneText" style={Font.subtitle_en}>Phone & WhatsApp: +60 18 632 0278</p>
+          <p id="aboutText" style={Font.subtitle_en}>
+            Email: jian000209@gmail.com
+          </p>
+          <p id="phoneText" style={Font.subtitle_en}>
+            Phone & WhatsApp: +60 18 632 0278
+          </p>
         </div>
       </div>
     </div>

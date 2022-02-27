@@ -8,7 +8,11 @@ import "./css/index.css";
 import "animate.css";
 import logo from "../Assets/image/self_icon.png";
 import normal from "../Assets/image/normal.jpg";
-import laugh from "../Assets/image/laugh.jpg";
+import java_assignment from "../Assets/image/java_project_image.png";
+import class_assignment from "../Assets/image/class_asign_image.png";
+import fyp_assignment from "../Assets/image/fyp_assignment.png";
+import visualbasic_assignment from "../Assets/image/visualbasic_assignment.png";
+import self_project from "../Assets/image/self_project.png";
 import coding from "../Assets/image/coding.png";
 import habit from "../Assets/image/habit.png";
 import languageLogo from "../Assets/image/language.png";
@@ -41,6 +45,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
+import Footer from "../Components/Footer";
 import SkillBar from "react-skillbars";
 
 const Index = () => {
@@ -226,7 +231,7 @@ const Index = () => {
     transform: "translate(-50%, -50%)",
     width: windowWidth * 0.6,
     maxHeight: windowHeight * 0.8,
-    overflow: 'auto',
+    overflow: "auto",
     border: "1px solid",
     borderColor: Colors.lightSecondaryColor,
     backgroundColor: Colors.lightPrimaryColor,
@@ -236,74 +241,74 @@ const Index = () => {
   };
 
   const hardSkills = [
-    {type: "React Native", level: 85},
-    {type: "React JS", level: 80},
-    {type: "Java", level: 73},
-    {type: "HTML CSS", level: 71},
-    {type: "Visual Basic", level: 70},
-    {type: "SQL", level: 65},
-    {type: "PHP", level: 60},
-    {type: "TypeScript", level: 58},
-    {type: "Python", level: 57},
+    { type: "React Native", level: 85 },
+    { type: "React JS", level: 80 },
+    { type: "Java", level: 73 },
+    { type: "HTML CSS", level: 71 },
+    { type: "Visual Basic", level: 70 },
+    { type: "SQL", level: 65 },
+    { type: "PHP", level: 60 },
+    { type: "TypeScript", level: 58 },
+    { type: "Python", level: 57 },
   ];
 
   const languageSkills = [
-    {type: "Mandarin", level: 90},
-    {type: "English", level: 70},
-    {type: "Malay", level: 30},
+    { type: "Mandarin", level: 90 },
+    { type: "English", level: 70 },
+    { type: "Malay", level: 30 },
   ];
 
   const softSkills = [
-    {type: "Responsibility", level: 96},
-    {type: "Cooperation", level: 95},
-    {type: "Learning", level: 90},
-    {type: "Problem Solving", level: 85},
-    {type: "Adaptability", level: 80},
-    {type: "Organization", level: 75},
-    {type: "Communication", level: 68},
+    { type: "Responsibility", level: 96 },
+    { type: "Cooperation", level: 95 },
+    { type: "Learning", level: 90 },
+    { type: "Problem Solving", level: 85 },
+    { type: "Adaptability", level: 80 },
+    { type: "Organization", level: 75 },
+    { type: "Communication", level: 68 },
   ];
 
   const otherSkills = [
-    {type: "AutoCad LT", level: 90},
-    {type: "PowerPoint", level: 90},
-    {type: "Visio", level: 87},
-    {type: "Git", level: 80},
-    {type: "Word", level: 75},
-    {type: "Access", level: 73},
-    {type: "Excel", level: 55},
+    { type: "AutoCad LT", level: 90 },
+    { type: "PowerPoint", level: 90 },
+    { type: "Visio", level: 87 },
+    { type: "Git", level: 80 },
+    { type: "Word", level: 75 },
+    { type: "Access", level: 73 },
+    { type: "Excel", level: 55 },
   ];
 
   const skillsColors = {
-    "bar": {
-      "hue": 200,
-      "saturation": 34,
-      "level": {
-        "minimum": 30,
-        "maximum": 65
-      }
-    },
-    "title": {
-      "text": {
-        "hue": 14,
-        "saturation": {
-          "minimum": 23,
-          "maximum": 2
-        },
-        "level": 48
+    bar: {
+      hue: 200,
+      saturation: 34,
+      level: {
+        minimum: 30,
+        maximum: 65,
       },
-      "background": {
-        "hue": 32,
-        "saturation": {
-          "minimum": 38,
-          "maximum": 78
+    },
+    title: {
+      text: {
+        hue: 14,
+        saturation: {
+          minimum: 23,
+          maximum: 2,
         },
-        "level": {
-          "minimum": 95,
-          "maximum": 100
-        }
-      }
-    }
-  }
+        level: 48,
+      },
+      background: {
+        hue: 32,
+        saturation: {
+          minimum: 38,
+          maximum: 78,
+        },
+        level: {
+          minimum: 95,
+          maximum: 100,
+        },
+      },
+    },
+  };
 
   return (
     <div>
@@ -331,7 +336,7 @@ const Index = () => {
             >
               Hard Skills Set
             </p>
-            <SkillBar colors={skillsColors} skills={hardSkills}/>
+            <SkillBar colors={skillsColors} skills={hardSkills} />
           </Box>
         </Fade>
       </Modal>
@@ -358,7 +363,7 @@ const Index = () => {
             >
               Language Skills Set
             </p>
-            <SkillBar colors={skillsColors} skills={languageSkills}/>
+            <SkillBar colors={skillsColors} skills={languageSkills} />
           </Box>
         </Fade>
       </Modal>
@@ -385,7 +390,7 @@ const Index = () => {
             >
               Soft Skills Set
             </p>
-            <SkillBar colors={skillsColors} skills={softSkills}/>
+            <SkillBar colors={skillsColors} skills={softSkills} />
           </Box>
         </Fade>
       </Modal>
@@ -412,7 +417,7 @@ const Index = () => {
             >
               Software Skills Set
             </p>
-            <SkillBar colors={skillsColors} skills={otherSkills}/>
+            <SkillBar colors={skillsColors} skills={otherSkills} />
           </Box>
         </Fade>
       </Modal>
@@ -479,10 +484,6 @@ const Index = () => {
                   I'm a Application Developer.
                 </span>
                 <Typist.Backspace count={28} delay={1000} />
-                <span className="animationTyping">
-                  I can learn everything with my best.
-                </span>
-                <Typist.Backspace count={36} delay={1000} />
                 <div className="animationTyping">LEARNED</div>
                 <Typist.Backspace count={0} delay={500} />
                 <span className="animationTyping">JAVA</span>
@@ -557,9 +558,12 @@ const Index = () => {
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea onClick={() => {
+                      <CardActionArea
+                        onClick={() => {
                           setShowLanguage(true);
-                        }} className="skills">
+                        }}
+                        className="skills"
+                      >
                         <img
                           src={languageLogo}
                           alt="Logo"
@@ -579,9 +583,12 @@ const Index = () => {
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea onClick={() => {
+                      <CardActionArea
+                        onClick={() => {
                           setShowSoftSkills(true);
-                        }} id="soft">
+                        }}
+                        id="soft"
+                      >
                         <img
                           src={habit}
                           alt="Logo"
@@ -601,9 +608,12 @@ const Index = () => {
                   </Grid>
                   <Grid item xs={8}>
                     <Card>
-                      <CardActionArea onClick={() => {
+                      <CardActionArea
+                        onClick={() => {
                           setShowOthers(true);
-                        }} className="skills">
+                        }}
+                        className="skills"
+                      >
                         <img
                           src={other}
                           alt="Logo"
@@ -627,26 +637,216 @@ const Index = () => {
           ) : null}
 
           {currentNav === 2 ? (
-            <Container className="absoluteBottom" id="contactCont">
-              <div className="contactImage animate__animated animate__bounceInRight">
-                <img src={laugh} alt="Logo" id="contactImage" height="450" />
-              </div>
-              <div className="whoAmI animate__animated animate__bounceInLeft">
-                <div id="footerContactDetail">
-                  <a
-                    style={{ textDecoration: "none", color: "black" }}
-                    href="https://github.com/jian0209"
-                  >
-                    <GitHub />
-                  </a>
-                  <a
-                    style={{ textDecoration: "none", color: "black" }}
-                    href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
-                  >
-                    <LinkedIn />
-                  </a>
-                </div>
-              </div>
+            <Container className="absoluteBottom" id="portfolioInnerCont">
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                spacing={5}
+                columns={windowWidth < 550 ? 4 : 12}
+              >
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInTopLeft ">
+                    <div className="topInnerCont">
+                      <img
+                        src={class_assignment}
+                        alt="class_assignment"
+                        class="imgInnerCont"
+                      />
+                    </div>
+                    <div className="bottomInnerCont">
+                      <p style={Font.normalizeFont_en}>
+                        Type: Mini Side Project
+                      </p>
+                      <p style={Font.normalizeFont_en}>
+                        Name: Class Assignment
+                      </p>
+                      <p style={Font.normalizeFont_en}>
+                        Programming Language: -
+                      </p>
+                      <p style={Font.normalizeFont_en}>Software: MS Excel</p>
+                      <p style={Font.normalizeFont_en}>
+                        Features: To allocate the class to teacher in the
+                        school.
+                      </p>
+                      <p style={Font.normalizeFont_en}>
+                        Description: This is my first very simple side project
+                        from the outside which was entrusted by a teacher who
+                        from Chung Hwa High School located at Muar Johor.
+                      </p>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInDown ">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={fyp_assignment}
+                          alt="fyp_assignment"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_en}>
+                          Type: Final Year Project
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Name: Restaurant Management System
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Programming Language: Visual Basic
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Software: Visual Studio
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Software Requirement: SAP Crystal Report(runtime
+                          version)
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Features: Order Payment, Customer Membership,
+                          Report(Weekly Sales, Monthly Sales, Remaining Stock),
+                          Manage Employee, Manage Supplier.
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Login Account: staff ID - 100001, password - test
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Login Account: admin ID - 100000, password - test
+                        </p>
+                        <p style={Font.normalizeFont_en}>Database - SQL</p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInTopRight">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={visualbasic_assignment}
+                          alt="visualbasic_assignment"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_en}>
+                          Type: Individual Assignment
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Name: Student Internship System
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Programming Language: Visual Basic
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Software: Visual Studio
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Software Requirement: SAP Crystal Report(runtime
+                          version)
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Features: Register Account as Diploma or Degree
+                          students, Edit account, Create CV, Create Logbook,
+                          Edit and Delete Logbook.
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Description: To create logbook and cv when students is
+                          during internship.
+                        </p>
+                        <p style={Font.normalizeFont_en}>Database - SQL</p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInBottomLeft">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={self_project}
+                          alt="self_project"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_en}>Type: Portfolio</p>
+                        <p style={Font.normalizeFont_en}>
+                          Programming Language: React JS
+                        </p>
+                        <p style={Font.normalizeFont_en}>Software: VS Code</p>
+                        <p style={Font.normalizeFont_en}>
+                          Description: To know about my skills, portfolio,
+                          github, and about me.
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Database - json server (API)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInUp">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <img
+                          src={java_assignment}
+                          alt="java_assignment"
+                          class="imgInnerCont"
+                        />
+                      </div>
+                      <div className="bottomInnerCont">
+                        <p style={Font.normalizeFont_en}>
+                          Type: Individual Assignment
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Name: Banking System
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Programming Language: Java
+                        </p>
+                        <p style={Font.normalizeFont_en}>Software: Netbean</p>
+                        <p style={Font.normalizeFont_en}>
+                          Features: login as admin, register customer account,
+                          edit customer information, withdrawal, deposit,
+                          transaction history, transfer cash, and mini game.
+                        </p>
+                        <p style={Font.normalizeFont_en}>
+                          Login Account: username - jin, password - asd
+                        </p>
+                        <p style={Font.normalizeFont_en}>Database - Textpad</p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={4}>
+                  <div className="portfolioInnerCont animate__animated animate__fadeInBottomRight">
+                    <div className="portfolioInnerCont">
+                      <div className="topInnerCont">
+                        <a
+                          style={{ textDecoration: "none", color: "black" }}
+                          href="https://github.com/jian0209"
+                          target="_blank"
+                        >
+                          <GitHub class="imgInnerCont" />
+                        </a>
+                      </div>
+                      <div className="topInnerCont">
+                        <a
+                          style={{ textDecoration: "none", color: "black" }}
+                          href="https://apu-joblink-csm.symplicity.com/profiles/tp054604"
+                          target="_blank"
+                        >
+                          <LinkedIn class="imgInnerCont" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+              </Grid>
             </Container>
           ) : null}
 

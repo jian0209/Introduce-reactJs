@@ -28,7 +28,7 @@
   align-items: center;
 }
 
-.topBack p{
+.topBack p {
   margin: 0;
 }
 
@@ -62,9 +62,11 @@
   justify-content: center;
   align-items: center;
   /* border: 1px solid black; */
-  width: 53.5%;
+  width: 48.5%;
   background-color: antiquewhite;
 }
+
+
 
 #explainFuturePlan {
   /* border: 1px solid black; */
