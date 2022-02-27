@@ -28,6 +28,10 @@
   align-items: center;
 }
 
+.ps {
+  overflow-x: auto;
+}
+
 .topBack p {
   margin: 0;
 }
