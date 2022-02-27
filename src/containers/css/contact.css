@@ -28,6 +28,11 @@
   align-items: center;
 }
 
+.ps{
+  overflow-x: auto;
+  margin: 15px 0;
+}
+
 .ps::-webkit-scrollbar {
   display: none;
 }
@@ -119,16 +124,6 @@
   /* border: 1px black solid; */
   overflow-x: auto !important;
   overflow-y: hidden !important;
-}
-
-.Timeline-wrapper-1::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.Timeline-wrapper-1 {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 }
 
 .TimelineEvent-container-4 {
