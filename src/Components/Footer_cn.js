@@ -94,9 +94,13 @@ const Footer_cn = () => {
           <p id="aboutText" style={Font.subtitle_en}>
             电子邮件: jian000209@gmail.com
           </p>
-          <p id="phoneText" style={Font.subtitle_en}>
+          <a
+            href="https://wa.link/65m9bd"
+            id="phoneText"
+            style={Font.subtitle_en}
+          >
             电话与WhatsApp: +60 18 632 0278
-          </p>
+          </a>
         </div>
       </div>
     </div>

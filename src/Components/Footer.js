@@ -78,9 +78,13 @@ const Footer = () => {
           <p id="aboutText" style={Font.subtitle_en}>
             Email: jian000209@gmail.com
           </p>
-          <p id="phoneText" style={Font.subtitle_en}>
+          <a
+            href="https://wa.link/65m9bd"
+            id="phoneText"
+            style={Font.subtitle_en}
+          >
             Phone & WhatsApp: +60 18 632 0278
-          </p>
+          </a>
         </div>
       </div>
     </div>
